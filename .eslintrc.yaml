@@ -1,0 +1,17 @@
+---
+root: true
+env:
+  browser: true
+extends: standard
+rules:
+  comma-dangle:
+    - error
+    - always-multiline
+  no-empty: warn
+  no-console: warn
+  space-before-function-paren:
+    - error
+    - never
+  object-curly-spacing:
+    - error
+    - always
