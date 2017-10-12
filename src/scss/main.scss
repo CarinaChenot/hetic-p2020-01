@@ -1,28 +1,24 @@
-/**
-* import your scss
-**/
+@charset 'UTF-8';
 
-/* [vendors import] */
+// 1. Helpers
+@import
+  'abstracts/functions',
+  'abstracts/mixins';
 
-@import 'vendors/*';
+// 2. Base
+@import
+  'base/normalize.css',
+  'base/variables';
 
-/* [abstracts import] */
+// 3. Layout
+@import
+  'layout/header',
+  'layout/footer';
 
-@import 'abstracts/**/*';
+// 4. Components
+@import
+  'components/button';
 
-/* [base import] */
-
-@import 'base/*';
-
-/* [components import] */
-
-@import 'components/*';
-
-/* [layout import] */
-
-@import 'layout/*';
-
-/* [pzges import] */
-
-@import 'pages/*';
-
+// 5. Page
+@import
+  'pages/home';
