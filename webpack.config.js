@@ -10,6 +10,39 @@ module.exports = {
   entry: {
     app: './src/index.js'
   },
+  output: {
+    filename: isProd ? '[name].bundle.min.js' : '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['env'],
+        }
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
+        },
+        {
+          test: /\.html$/,
+          use: 'html-loader'
+        }
+      )
+    }],
+  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
@@ -20,32 +53,6 @@ module.exports = {
       disable: !isProd
     }),
   ],
-  output: {
-    filename: isProd ? '[name].bundle.min.js' : '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-        options: {
-        }
-      },
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.html$/,
-        use: 'html-loader'
-      }
-    )
-    }],
-  },
 };
 
 if (isProd) {
