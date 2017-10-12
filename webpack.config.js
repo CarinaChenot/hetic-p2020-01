@@ -23,6 +23,11 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
+        enforce: 'pre',
+        test: /\.scss$/,
+        loader: 'import-glob-loader'
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
