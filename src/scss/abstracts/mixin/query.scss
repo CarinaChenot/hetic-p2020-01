@@ -1,0 +1,48 @@
+/*
+* query mixin
+* @ query for simple query  
+* @ queryMobil for responsive mobile 
+* @ queryTab for responsive tablette 
+*/
+
+
+@mixin query($media) {
+  @media only screen and (max-width : $media) {
+    @content;
+  }
+  @media screen and (max-device-width : $media) {
+    @content;
+  }
+}
+
+@mixin queryMobil($orientation)
+{
+  @media only screen and (min-device-width : 414px)  and (max-device-width : 736px) and (orientation : $orientation) {
+    @content;
+  }
+  @media only screen and (min-device-width : 375px)  and (max-device-width : 667px) and (orientation : $orientation) {
+    @content;
+  }
+  @media only screen and (min-device-width : 320px)  and (max-device-width : 568px) and (orientation : $orientation) {
+    @content;
+  }
+}
+
+@mixin queryTab($orientation)
+{
+  @media only screen and (min-device-width : 768px)  and (max-device-width : 1024px) and (orientation : $orientation) {
+    @content;
+  }
+  @if($orientation == "portrait")
+  {
+    @media only screen and (max-width : 900px) {
+      @content;
+    }
+  }
+  @else if($orientation ==  "landscape")
+  {
+    @media only screen and (max-width : 1200px) {
+      @content;
+    }
+  }
+}
