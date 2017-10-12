@@ -1,4 +1,4 @@
-# Alexis Benoliel documentation
+# documentation
 
 - [SASS](#Views)
 - [Javascript](#new)
