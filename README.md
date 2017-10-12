@@ -1,1 +1,6 @@
-# hetic-p2020-01
+# Alexis benoliel guideline
+
+- [doc](doc/doc.md)
+- [Git](doc/git.md)
+- [checklist](doc/check.md)
+- [snippet](doc/)

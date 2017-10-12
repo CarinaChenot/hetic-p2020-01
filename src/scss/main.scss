@@ -1,0 +1,28 @@
+/**
+* import your scss
+**/
+
+/* [vendors import] */
+
+@import 'vendors/*';
+
+/* [abstracts import] */
+
+@import 'abstracts/**/*';
+
+/* [base import] */
+
+@import 'base/*';
+
+/* [components import] */
+
+@import 'components/*';
+
+/* [layout import] */
+
+@import 'layout/*';
+
+/* [pzges import] */
+
+@import 'pages/*';
+
