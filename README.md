@@ -1,6 +1,15 @@
-# hetic P2020 01 guideline
+# Crosshelmet
 
-- [doc](doc/doc.md)
-- [Git](doc/git.md)
-- [checklist](doc/check.md)
-- [snippet](doc/)
+Website for the Crosshelmet kickstarter project
+
+## Installation
+```sh
+# Install dependencies
+yarn
+
+# Run dev
+yarn run dev
+
+# Build for production
+yarn run build
+```

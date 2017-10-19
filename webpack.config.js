@@ -49,7 +49,8 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Index',
-      template: './src/views/index.pug',
+      template: './src/views/home.pug',
+      filename: 'index.html',
       chunks: ['index']
     }),
     new HtmlWebpackPlugin({
