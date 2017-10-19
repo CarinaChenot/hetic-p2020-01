@@ -23,16 +23,13 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
-        enforce: 'pre',
-        test: /\.scss$/,
-        loader: 'import-glob-loader'
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['env'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
+          }
         }
       },
       {
@@ -40,18 +37,26 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader'],
-        },
-        {
-          test: /\.html$/,
-          use: 'html-loader'
-        }
-      )
-    }],
+        })
+      },
+      {
+        test: /\.pug$/,
+        use: 'pug-loader'
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: isProd ? 'Production' : 'Developement'
+      title: 'Index',
+      template: './src/views/index.pug',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'About',
+      template: './src/views/about.pug',
+      filename: 'about.html',
+      chunks: ['about']
     }),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',
