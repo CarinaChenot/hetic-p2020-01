@@ -1,0 +1,56 @@
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu--open {
+  display: flex;
+}
+
+.menu__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__link {
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0.9em 0;
+}
+
+.menu__ctas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu__cta {
+  @extend %baseBtn;
+  font-size: inherit;
+  text-decoration: none;
+  padding: 0.6em 0 0.5em;
+  margin: 0.5em 0;
+  width: 100%;
+
+  &:nth-last-child(2) {
+    color: $green;
+    background: $white;
+    border-color: $white;
+  }
+
+  &:nth-last-child(1) {
+    color: $white;
+    background: transparent;
+  }
+}

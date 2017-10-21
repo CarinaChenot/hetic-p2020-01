@@ -8,16 +8,19 @@
 // 2. Base
 @import
   'base/normalize.css',
-  'base/variables';
+  'base/variables',
+  'base/base';
 
 // 3. Layout
 @import
   'layout/header',
-  'layout/footer';
+  'layout/footer',
+  'layout/hero';
 
 // 4. Components
 @import
-  'components/button';
+  'components/buttons',
+  'components/menu';
 
 // 5. Page
 @import
