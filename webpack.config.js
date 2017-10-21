@@ -50,6 +50,19 @@ module.exports = {
         test: /\.pug$/,
         use: 'pug-loader'
       },
+       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          'image-webpack-loader'
+        ]
+      }
     ],
   },
   plugins: [
