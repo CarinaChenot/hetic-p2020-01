@@ -10,9 +10,16 @@ module.exports = {
   entry: {
     app: './src/index.js'
   },
+  devtool: isProd ? '' : 'eval-source-map',
   output: {
     filename: isProd ? '[name].bundle.min.js' : '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    hot: true,
+    open: true
   },
   module: {
     rules: [
@@ -51,18 +58,18 @@ module.exports = {
       title: 'Index',
       template: './src/views/home.pug',
       filename: 'index.html',
-      chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       title: 'About',
       template: './src/views/about.pug',
       filename: 'about.html',
-      chunks: ['about']
     }),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',
       disable: !isProd
     }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
 };
 
