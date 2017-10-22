@@ -1,0 +1,108 @@
+.hero {
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__image {
+  margin-bottom: 5em;
+}
+
+.hero__cta {
+  @extend %baseBtn;
+  color: $white;
+  background-color: $green;
+  box-shadow: 0 2px 6px $green-shadow;
+  border-color: $green;
+}
+
+.description {
+  background-color: $black;
+  color: $white;
+  padding: 2em;
+}
+
+.description__title {
+  text-align: center;
+  margin: 0 0 1em;
+}
+
+.description__text {
+  text-align: justify;
+}
+
+.experience {
+  padding: 3em 2em;
+  text-align: center;
+  background: grey;
+  min-height: 80vh;
+}
+
+.experience__cta {
+  @extend %baseBtn;
+  color: $white;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px $dark;
+}
+
+.lab {
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.lab__bg {
+  align-self: flex-end;
+  width: 100%;
+  margin-right: -2em;
+  opacity: 0.5;
+}
+
+.lab__image {
+  align-self: flex-start;
+  width: 100%;
+  margin-left: -2em;
+  margin-top: -40%;
+}
+
+.lab__text {
+  text-align: left;
+  margin-top: 2em;
+}
+
+.lab__cta {
+  @extend %baseBtn;
+  color: $black;
+  margin-top: 1.5em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px gray;
+}
+
+.specs {
+  background-color: $black;
+  padding: 3em 0;
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  align-items: center;
+}
+
+.specs__title {
+  margin-top: 0;
+}
+
+.specs__image {
+  align-self: flex-start;
+}
+
+.specs__text {
+  padding: 0 2em;
+  margin-bottom: 3em;
+}
+
+.specs__cta {
+  @extend %baseBtn;
+}
