@@ -5,6 +5,7 @@
       text-align: center;
       font-size: 36px;
       margin-top: 28px;
+      margin-bottom: 20px;
       font-family: $condensed;
   }
   &__content {
@@ -32,6 +33,10 @@
           &__event {
               margin-left: 27px;
               @include flex($justify: flex-start);
+              &--end {
+                margin-top: 20px;
+                margin-bottom: 40px;
+              }
               &__point {
                   width: 15px;
                   height: 15px;
@@ -39,8 +44,34 @@
                   border-radius: 50%;
               }
               &__text {
-                margin-left: 28px;
+                margin-left: 27px;
+                &--end {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                }
               }
+              &--months {
+                margin-left: 27px;
+                @include flex($justify: flex-start);
+                  &__point {
+                    width: 15px;
+                    height: 15px;
+                    background: $white;
+                    border-radius: 50%;
+                }
+                &__text {
+                  margin-left: 27px;
+                }
+                &__month {
+                  margin-left: 27px;
+                  color: #5790DC;
+                }
+              }
+          }
+          &__image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
           }
       }
   }
