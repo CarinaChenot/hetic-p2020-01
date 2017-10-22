@@ -3,7 +3,8 @@
 // 1. Helpers
 @import
   'abstracts/functions',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/config';
 
 // 2. Base
 @import
@@ -21,4 +22,5 @@
 
 // 5. Page
 @import
-  'pages/home';
+  'pages/home',
+  'pages/story';
