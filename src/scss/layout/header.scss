@@ -1,4 +1,7 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   background: #202020;
   padding: 1em 1.3em;
   overflow: hidden;
@@ -17,13 +20,6 @@
   border-top: 108px solid #191919;
 }
 
-.header__wrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
 .logo {
   display: flex;
   color: $white;
@@ -39,12 +35,22 @@
 
 .logo__title {
   display: none;
+
+  @include medium {
+    display: initial;
+  }
 }
 
 .toggle {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: relative;
+  cursor: pointer;
+
+  @include large {
+    display: none;
+  }
 }
 
 .toggle__stroke {

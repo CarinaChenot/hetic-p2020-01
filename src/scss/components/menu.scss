@@ -11,6 +11,17 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  @include large {
+    display: flex;
+    position: relative;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto;
+    margin: 0;
+    font-size: 1.2rem;
+  }
 }
 
 .menu--open {
@@ -20,6 +31,10 @@
 .menu__nav {
   display: flex;
   flex-direction: column;
+
+  @include large {
+    flex-direction: row;
+  }
 }
 
 .nav__link {
@@ -27,12 +42,21 @@
   text-transform: uppercase;
   text-decoration: none;
   margin: 0.9em 0;
+
+  @include large {
+    margin: 0 0 0 1em;
+  }
 }
 
 .menu__ctas {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @include large {
+    flex-direction: row;
+    width: auto;
+  }
 }
 
 .menu__cta {
@@ -42,6 +66,12 @@
   padding: 0.6em 0 0.5em;
   margin: 0.5em 0;
   width: 100%;
+
+  @include large {
+    width: initial;
+    padding: 0.5em;
+    margin: 0 0 0 1em;
+  }
 
   &:nth-last-child(2) {
     color: $green;
