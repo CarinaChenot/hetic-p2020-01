@@ -3,6 +3,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const isProd = (process.env.NODE_ENV === 'production');
 
@@ -86,6 +87,7 @@ module.exports = {
       filename: '[name].[contenthash].css',
       disable: !isProd
     }),
+    new StyleLintPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
