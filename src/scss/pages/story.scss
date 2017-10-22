@@ -1,94 +1,91 @@
 .story {
   color: $white;
   padding: 0 29px;
+}
+.story__title {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 28px;
+  margin-bottom: 20px;
+  font-family: $condensed;
+}
 
-  .story__title {
-      text-align: center;
-      font-size: 36px;
-      margin-top: 28px;
-      margin-bottom: 20px;
-      font-family: $condensed;
-  }
+.story__content {
+  position: relative;
+}
 
-  .story__content {
-      position: relative;
+.story__content__border {
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  background: $white;
+  left: calc(67.3px / 2);
+  z-index: -1;
+}
 
-      .story__content__border {
-          width: 1px;
-          height: 100%;
-          position: absolute;
-          background: $white;
-          left: calc(67.3px / 2);
-          z-index: -1;
-      }
+.chrono__date {
+  width: 67.3px;
+  height: 40px;
+  margin-bottom: 20px;
+  background: white;
+  @include flex();
+}
 
-      .chrono {
+.chrono__date__text {
+  color: $black;
+  font-size: 20px;
+  font-family: $condensed;
+}
 
-        .chrono__date {
-          width: 67.3px;
-          height: 40px;
-          background: white;
-          @include flex();
+.chrono__event {
+  margin-left: 27px;
+  @include flex($justify: flex-start);
+}
 
-          .chrono__date__text {
-              color: $black;
-              font-size: 20px;
-              font-family: $condensed;
-          }
-        }
+.chrono__event--end {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
 
-        .chrono__event {
-          margin-left: 27px;
-          @include flex($justify: flex-start);
+.chrono__event__point {
+    width: 15px;
+    height: 15px;
+    background: $white;
+    border-radius: 50%;
+}
 
-          .chrono__event--end {
-            margin-top: 20px;
-            margin-bottom: 40px;
-          }
+.chrono__event__text {
+  margin-left: 27px;
+}
 
-          .chrono__event__point {
-              width: 15px;
-              height: 15px;
-              background: $white;
-              border-radius: 50%;
-          }
+.chrono__event__text--end {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-          .chrono__event__text {
-            margin-left: 27px;
+.chrono__event--months {
+  margin-left: 27px;
+  @include flex($justify: flex-start);
+}
 
-            .chrono__event__text--end {
-              margin-top: 0;
-              margin-bottom: 0;
-            }
-          }
+.chrono__event--months__point {
+  width: 15px;
+  height: 15px;
+  background: $white;
+  border-radius: 50%;
+}
 
-          .chrono__event--months {
-            margin-left: 27px;
-            @include flex($justify: flex-start);
+.chrono__event--months__text {
+  margin-left: 27px;
+}
 
-            .chrono__event--months__point {
-                width: 15px;
-                height: 15px;
-                background: $white;
-                border-radius: 50%;
-            }
+.chrono__event--months__month {
+  margin-left: 27px;
+  color: #5790DC;
+}
 
-            .chrono__event__text {
-              margin-left: 27px;
-            }
-
-            .chrono__event__month {
-              margin-left: 27px;
-              color: #5790DC;
-            }
-          }
-        }
-
-      .chrono__image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 40px;
-      }
-    }
-  }
+.chrono__image {
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
 }
