@@ -1,27 +1,25 @@
 @charset 'UTF-8';
 
 // 1. Helpers
-@import
-  'abstracts/functions',
-  'abstracts/mixins',
-  'abstracts/config';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/config';
+@import 'abstracts/media-queries';
 
 // 2. Base
-@import
-  'base/normalize.css',
-  'base/variables';
+@import 'base/normalize.css';
+@import 'base/variables';
+@import 'base/base';
 
 // 3. Layout
-@import
-  'layout/body',
-  'layout/header',
-  'layout/footer';
+@import 'layout/body';
+@import 'layout/header';
+@import 'layout/footer';
 
 // 4. Components
-@import
-  'components/button';
+@import 'components/buttons';
+@import 'components/menu';
 
 // 5. Page
-@import
-  'pages/home',
-  'pages/story';
+@import 'pages/home';
+@import 'pages/story';

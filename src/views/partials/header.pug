@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:400,700|Saira:400,500,700" rel="stylesheet">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Crosshelmet</title>
-</head>
-<body>
-
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  title Crosshelmet
+  link(href='https://fonts.googleapis.com/css?family=Saira+Condensed:400,700|Saira:400,500,700', rel='stylesheet')
+header.header
+  span.header__shape
+  a.logo(href='index.html')
+    include ../icons/logo.pug
+    span.logo__title Crosshelmet
+  .toggle
+    span.toggle__stroke
+    span.toggle__stroke
+    span.toggle__stroke
+  .menu
+    nav.menu__nav
+      a.nav__link(href='#') Live the experience
+      a.nav__link(href='#') Discover the lab
+      a.nav__link(href='#') Product Specs
+    .menu__ctas
+      a.menu__cta(href='#') Purcharse
+      a.menu__cta(href='#') Get the app
