@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const isProd = (process.env.NODE_ENV === 'production')
+const isProd = (process.env.NODE_ENV === 'production');
 
 module.exports = {
   entry: {
@@ -76,6 +76,11 @@ module.exports = {
       title: 'About',
       template: './src/views/about.pug',
       filename: 'about.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Story',
+      template: './src/views/story.pug',
+      filename: 'story.html',
     }),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',

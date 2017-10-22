@@ -4,7 +4,8 @@
 @import
   'abstracts/functions',
   'abstracts/mixins',
-  'abstracts/media-queries';
+  'abstracts/media-queries',
+  'abstracts/config';
 
 // 2. Base
 @import
@@ -14,6 +15,7 @@
 
 // 3. Layout
 @import
+  'layout/body',
   'layout/header',
   'layout/footer',
   'layout/hero';
@@ -25,4 +27,5 @@
 
 // 5. Page
 @import
-  'pages/home';
+  'pages/home',
+  'pages/story';

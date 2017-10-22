@@ -1,0 +1,10 @@
+.story {
+    color: $white;
+    padding: 0 29px;
+    &__title {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 28px;
+        font-family: $condensed;
+    }
+}
