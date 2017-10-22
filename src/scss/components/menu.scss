@@ -6,9 +6,8 @@
   align-items: center;
   text-align: center;
   width: fit-content;
-  margin: auto;
-  height: 100vh;
-  position: absolute;
+  margin: 2em auto;
+  height: 80%;
   top: 0;
   left: 0;
 
@@ -22,10 +21,10 @@
     margin: 0;
     font-size: 1.2rem;
   }
-}
 
-.menu--open {
-  display: flex;
+  .isOpen & {
+    display: flex;
+  }
 }
 
 .menu__nav {

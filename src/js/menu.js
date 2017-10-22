@@ -1,7 +1,9 @@
 const menuBtn = document.querySelector('.toggle')
+const header = document.querySelector('.header')
+
 menuBtn.addEventListener('click', e => toggleState(e))
 
 function toggleState(e) {
-  if (menuBtn.classList.contains('isOpen')) menuBtn.classList.remove('isOpen')
-  else menuBtn.classList.add('isOpen')
+  if (header.classList.contains('isOpen')) header.classList.remove('isOpen')
+  else header.classList.add('isOpen')
 }

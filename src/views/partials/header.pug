@@ -7,13 +7,14 @@ head
   link(href='https://fonts.googleapis.com/css?family=Saira+Condensed:400,700|Saira:400,500,700', rel='stylesheet')
 header.header
   span.header__shape
-  a.logo(href='index.html')
-    include ../icons/logo.pug
-    span.logo__title Crosshelmet
-  .toggle
-    span.toggle__stroke
-    span.toggle__stroke
-    span.toggle__stroke
+  .header__wrapper
+    a.logo(href='index.html')
+      include ../icons/logo.pug
+      span.logo__title Crosshelmet
+    .toggle
+      span.toggle__stroke
+      span.toggle__stroke
+      span.toggle__stroke
   .menu
     nav.menu__nav
       a.nav__link(href='#') Live the experience
