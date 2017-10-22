@@ -1,10 +1,47 @@
 .story {
-    color: $white;
-    padding: 0 29px;
-    &__title {
-        text-align: center;
-        font-size: 36px;
-        margin-top: 28px;
-        font-family: $condensed;
-    }
+  color: $white;
+  padding: 0 29px;
+  &__title {
+      text-align: center;
+      font-size: 36px;
+      margin-top: 28px;
+      font-family: $condensed;
+  }
+  &__content {
+      position: relative;
+      &__border {
+          width: 1px;
+          height: 100%;
+          position: absolute;
+          background: $white;
+          left: calc(67.3px / 2);
+          z-index: -1;
+      }
+      .chrono {
+          &__date {
+              width: 67.3px;
+              height: 40px;
+              background: white;
+              @include flex();
+              &__text {
+                  color: $black;
+                  font-size: 20px;
+                  font-family: $condensed;
+              }
+          }
+          &__event {
+              margin-left: 27px;
+              @include flex($justify: flex-start);
+              &__point {
+                  width: 15px;
+                  height: 15px;
+                  background: $white;
+                  border-radius: 50%;
+              }
+              &__text {
+                margin-left: 28px;
+              }
+          }
+      }
+  }
 }
