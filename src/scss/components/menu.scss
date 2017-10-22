@@ -1,0 +1,86 @@
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include large {
+    display: flex;
+    position: relative;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}
+
+.menu--open {
+  display: flex;
+}
+
+.menu__nav {
+  display: flex;
+  flex-direction: column;
+
+  @include large {
+    flex-direction: row;
+  }
+}
+
+.nav__link {
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0.9em 0;
+
+  @include large {
+    margin: 0 0 0 1em;
+  }
+}
+
+.menu__ctas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include large {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.menu__cta {
+  @extend %baseBtn;
+  font-size: inherit;
+  text-decoration: none;
+  padding: 0.6em 0 0.5em;
+  margin: 0.5em 0;
+  width: 100%;
+
+  @include large {
+    width: initial;
+    padding: 0.5em;
+    margin: 0 0 0 1em;
+  }
+
+  &:nth-last-child(2) {
+    color: $green;
+    background: $white;
+    border-color: $white;
+  }
+
+  &:nth-last-child(1) {
+    color: $white;
+    background: transparent;
+  }
+}

@@ -4,12 +4,14 @@
 @import
   'abstracts/functions',
   'abstracts/mixins',
+  'abstracts/media-queries',
   'abstracts/config';
 
 // 2. Base
 @import
   'base/normalize.css',
-  'base/variables';
+  'base/variables',
+  'base/base';
 
 // 3. Layout
 @import
@@ -19,7 +21,8 @@
 
 // 4. Components
 @import
-  'components/button';
+  'components/buttons',
+  'components/menu';
 
 // 5. Page
 @import
