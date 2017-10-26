@@ -33,6 +33,13 @@
 .description__title {
   text-align: center;
   margin: 0 0 1em;
+  font-size: em(24);
+  letter-spacing: 2px;
+
+  .description.scrolled & {
+    transition: letter-spacing 1s ease-in-out;
+    letter-spacing: 7px;
+  }
 }
 
 .description__text {
