@@ -2,12 +2,12 @@
   color: $white;
   padding: 0 em(29);
   background-color: $black;
+  padding-top: em(28);
 }
 
 .story__title {
   text-align: center;
   font-size: em(36);
-  margin-top: em(28);
   margin-bottom: em(20);
   font-family: $condensed;
 }
@@ -22,7 +22,11 @@
   position: absolute;
   background: $white;
   left: calc(67.3px / 2);
-  z-index: -1;
+}
+
+.chrono {
+  position: relative;
+  z-index: 10;
 }
 
 .chrono__date {
@@ -48,7 +52,6 @@
 
 .chrono__event--end {
   margin-top: em(20);
-  margin-bottom: em(40);
 }
 
 .chrono__event__point {
