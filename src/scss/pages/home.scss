@@ -59,7 +59,6 @@
   align-self: flex-end;
   width: 100%;
   margin-right: -2em;
-  opacity: 0.5;
 }
 
 .lab__image {
@@ -84,7 +83,7 @@
 
 .specs {
   background-color: $black;
-  padding: 3em 0;
+  padding: 3em 0 13em;
   display: flex;
   flex-direction: column;
   color: $white;
@@ -106,5 +105,28 @@
 }
 
 .specs__cta {
+  @extend %baseBtn;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1em 3em;
+}
+
+.app__image {
+  max-width: 80%;
+  margin-top: -9em;
+}
+
+.app__text {
+  font-size: em(14);
+  margin: 2em;
+  text-align: justify;
+  line-height: 1.45;
+}
+
+.app__cta {
   @extend %baseBtn;
 }
