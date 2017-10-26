@@ -1,0 +1,50 @@
+.footer {
+  background: $black;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.footer__icons {
+  display: flex;
+}
+
+.icons__item {
+  list-style: none;
+
+  svg {
+    fill: #747272;
+  }
+}
+
+.footer__logo {
+  position: relative;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    left: 0;
+    right: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.footer__legal {
+  font-size: em(10);
+}
