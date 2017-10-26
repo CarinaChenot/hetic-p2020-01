@@ -88,7 +88,6 @@ module.exports = {
       filename: '[name].[contenthash].css',
       disable: !isProd
     }),
-    new StyleLintPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
@@ -107,5 +106,9 @@ if (isProd) {
         warnings: false
       }
     })
+  ])
+} else {
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new StyleLintPlugin(),
   ])
 }
