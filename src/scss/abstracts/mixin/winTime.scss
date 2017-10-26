@@ -8,11 +8,11 @@
 */
 
 @mixin hover() {
-    &:active,
-    &:focus,
-    &:hover {
-        @content;
-    }
+  &:active,
+  &:focus,
+  &:hover {
+    @content;
+  }
 }
 
 /*
@@ -20,10 +20,10 @@
 * @include pseudo()
 */
 
-@mixin pseudo($display: block, $pos: absolute, $content: ''){
-    content: $content;
-    display: $display;
-    position: $pos;
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
 }
 
 /*
@@ -31,13 +31,12 @@
 * @include placeholder() {...}
 */
 @mixin placeholder {
-    &.placeholder { @content; }
-    &:-moz-placeholder { @content; }
-    &::-moz-placeholder { @content; }
-    &:-ms-input-placeholder { @content; }
-    &::-webkit-input-placeholder { @content; }
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
 }
-
 
 /*
 *[flex]
@@ -46,10 +45,10 @@
 * @include flex(column, space-around, center);
 */
 @mixin flex($direction: row, $justify: center, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 /*
@@ -59,11 +58,11 @@
 * @include abutton($color: red, $left: 20px);
 */
 @mixin abutton($display: block, $color: #FFF, $bg: #000, $w: auto, $up: 10px, $left: 10px) {
-		display: $display;
-		background-color: $bg;
-		color: $color;
-		width: $w;
-		padding: $up $left
+  display: $display;
+  background-color: $bg;
+  color: $color;
+  width: $w;
+  padding: $up $left;
 }
 
 /*
@@ -73,9 +72,9 @@
 * @include border($w: 50%);
 */
 @mixin border($bg: #000, $h : 4px, $w: 20%) {
-		background-color: $bg;
-		height: $h;
-		width: $w;
+  background-color: $bg;
+  height: $h;
+  width: $w;
 }
 
 /*
@@ -85,10 +84,14 @@
 * @include txt($size: 50px, $ply: $font-bold)
 */
 @mixin txt($font: false, $size : false, $color: false, $ply: false, $lh: false) {
-		@if $font { font-family: $font; }
-		@if $size { font-size: $size; }
-		@if $color { color: $color; }
-		@if $ply { font-weight: $ply; }
-		@if $lh { line-height: $lh; }
+  @if $font { font-family: $font; }
+
+  @if $size { font-size: $size; }
+
+  @if $color { color: $color; }
+
+  @if $ply { font-weight: $ply; }
+
+  @if $lh { line-height: $lh; }
 }
 
