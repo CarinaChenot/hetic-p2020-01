@@ -1,6 +1,6 @@
 // import './vendors/io-polyfill.js' //TODO: Add sourcemaps (fix eslint ?)
 
-IntersectionObserver.prototype.POLL_INTERVAL = 100;
+IntersectionObserver.prototype.POLL_INTERVAL = 100
 
 function onIntersect(entries) {
   entries.forEach(entry => {
@@ -9,7 +9,7 @@ function onIntersect(entries) {
 }
 
 const options = {
-  rootMargin: '-200px' // To fire the event little bit after screen enters
+  rootMargin: '-200px', // To fire the event little bit after screen enters
 }
 
 const observer = new window.IntersectionObserver(onIntersect, options)
