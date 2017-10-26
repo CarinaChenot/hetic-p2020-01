@@ -1,3 +1,9 @@
+%pText {
+  font-size: $p-size;
+  line-height: 1.45;
+  text-align: justify;
+}
+
 .hero {
   padding: 3em 2em;
   display: flex;
@@ -30,7 +36,7 @@
 }
 
 .description__text {
-  text-align: justify;
+  @extend %pText;
 }
 
 .experience {
@@ -69,6 +75,7 @@
 }
 
 .lab__text {
+  @extend %pText;
   text-align: left;
   margin-top: 2em;
 }
@@ -100,6 +107,7 @@
 }
 
 .specs__text {
+  @extend %pText;
   padding: 0 2em;
   margin-bottom: 3em;
 }
@@ -121,10 +129,8 @@
 }
 
 .app__text {
-  font-size: em(14);
+  @extend %pText;
   margin: 2em;
-  text-align: justify;
-  line-height: 1.45;
 }
 
 .app__cta {
