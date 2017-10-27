@@ -2,11 +2,12 @@
   color: $white;
   padding: 0 em(29);
   background-color: $black;
+  padding-top: em(28);
 }
+
 .story__title {
   text-align: center;
   font-size: em(36);
-  margin-top: em(28);
   margin-bottom: em(20);
   font-family: $condensed;
 }
@@ -21,7 +22,11 @@
   position: absolute;
   background: $white;
   left: calc(67.3px / 2);
-  z-index: -1;
+}
+
+.chrono {
+  position: relative;
+  z-index: 10;
 }
 
 .chrono__date {
@@ -29,6 +34,7 @@
   height: em(40);
   margin-bottom: 20px;
   background: $white;
+
   @include flex();
 }
 
@@ -40,19 +46,19 @@
 
 .chrono__event {
   margin-left: 27px;
+
   @include flex($justify: flex-start);
 }
 
 .chrono__event--end {
   margin-top: em(20);
-  margin-bottom: em(40);
 }
 
 .chrono__event__point {
-    width: em(15);
-    height: em(15);
-    background: $white;
-    border-radius: 50%;
+  width: em(15);
+  height: em(15);
+  background: $white;
+  border-radius: 50%;
 }
 
 .chrono__event__text {
@@ -66,6 +72,7 @@
 
 .chrono__event--months {
   margin-left: em(27);
+
   @include flex($justify: flex-start);
 }
 
@@ -82,7 +89,7 @@
 
 .chrono__event--months__month {
   margin-left: em(27);
-  color: #5790DC;
+  color: #5790dc;
 }
 
 .chrono__image {
