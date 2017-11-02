@@ -2,11 +2,12 @@ include partials/header.pug
 
 section.hero
   img.hero__image(src=require('../img/helmet.png'), alt="")
-  a.hero__cta(href="#") Purchase now
+  .hero__ctaWrapper
+    a.hero__cta(href="#") Purchase now
 
-section.description.to-animate
-  h1.description__title Brave the Adventure
-  p.description__text The CrossHelmet is a next generation motorcycle helmet with sound control and 360˚ visibility that will transform your riding experience. Motorcycles are developing faster than helmets. As a rider, you need more choices, to find the helmet that meets your needs.
+  .hero__description.to-animate
+    h1.description__title Brave the Adventure
+    p.description__text The CrossHelmet is a next generation motorcycle helmet with sound control and 360˚ visibility that will transform your riding experience. Motorcycles are developing faster than helmets. As a rider, you need more choices, to find the helmet that meets your needs.
 
 section.experience
   .experience__video
