@@ -5,29 +5,93 @@
 }
 
 .hero {
-  padding: 3em 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+   /* stylelint-disable */
+  grid-template-areas:
+    "hero__image hero__image"
+    "hero__cta hero__cta"
+    "hero__description hero__description";
+
+  @include medium {
+    margin: 0 3em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero__image"
+      "hero__description"
+      "hero__cta";
+  }
+
+  @include large {
+    margin: 2em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero__image hero__description"
+      "hero__image hero__cta";
+    /* stylelint-enable */
+  }
 }
 
 .hero__image {
-  margin-bottom: 5em;
+  grid-area: hero__image;
   max-width: 100%;
+  padding: 3em 2em;
+  margin: auto;
+
+  @include medium {
+    margin: initial;
+  }
+
+  @include large {
+    margin: auto;
+    padding: 5em;
+    max-width: 70%;
+  }
+}
+
+.hero__ctaWrapper {
+  grid-area: hero__cta;
+  display: flex;
+
+  @include large {
+    display: initial;
+  }
 }
 
 .hero__cta {
   @extend %baseBtn;
+
   color: $white;
   background-color: $green;
   box-shadow: 0 2px 6px $green-shadow;
   border-color: $green;
+  margin: 0.5em auto 3em;
 }
 
-.description {
+.hero__description {
+  grid-area: hero__description;
   background-color: $black;
   color: $white;
-  padding: 2em;
+  padding: 2em 3em;
+
+  @include medium {
+    max-width: 70vw;
+    background-color: initial;
+    color: initial;
+    margin: 0 auto;
+  }
+
+  @include large {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 5em 5em 5em 0;
+    max-width: 40vw;
+  }
 }
 
 .description__title {
@@ -35,6 +99,10 @@
   margin: 0 0 1em;
   font-size: em(24);
   letter-spacing: 2px;
+
+  @include large {
+    text-align: initial;
+  }
 
   .description.scrolled & {
     transition: letter-spacing 1s ease-in-out;
@@ -51,10 +119,28 @@
   text-align: center;
   background: grey;
   min-height: 80vh;
+
+  @include large {
+    padding-bottom: 5em;
+  }
+}
+
+.experience__text {
+  display: none;
+  color: $white;
+  font-size: em(20);
+  max-width: 35vw;
+  margin: 30vh auto;
+  text-align: left;
+
+  @include large {
+    display: block;
+  }
 }
 
 .experience__cta {
   @extend %baseBtn;
+
   color: $white;
   text-transform: uppercase;
   box-shadow: 0 2px 6px $dark;
@@ -66,33 +152,75 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+
+  @include large {
+    flex-direction: row;
+  }
 }
 
 .lab__bg {
   align-self: flex-end;
-  width: 100%;
+  max-width: 100%;
   margin-right: -2em;
 }
 
 .lab__image {
   align-self: flex-start;
-  width: 100%;
+  max-width: 100%;
   margin-left: -2em;
   margin-top: -40%;
 }
 
+.lab__textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include large {
+    max-width: 50%;
+    padding: 0 5em;
+  }
+}
+
+.lab__title {
+  display: none;
+
+  @include large {
+    display: initial;
+  }
+}
+
 .lab__text {
   @extend %pText;
+
   text-align: left;
   margin-top: 2em;
+
+  @include large {
+    display: none;
+  }
+}
+
+.lab__text--large {
+  display: none;
+  text-align: left;
+
+  @include large {
+    display: initial;
+  }
 }
 
 .lab__cta {
   @extend %baseBtn;
+
   color: $black;
-  margin-top: 1.5em;
+  margin: 1.5em auto 0;
   text-transform: uppercase;
   box-shadow: 0 2px 6px gray;
+
+  @include large {
+    margin: 1.5em 0 0;
+  }
 }
 
 .specs {
@@ -102,6 +230,19 @@
   flex-direction: column;
   color: $white;
   align-items: center;
+  min-height: 80vh;
+  position: relative;
+  z-index: -1;
+
+  @include large {
+    > * {
+      max-width: 50%;
+    }
+
+    align-items: left;
+    padding-left: 50%;
+    justify-content: center;
+  }
 }
 
 .specs__title {
@@ -111,16 +252,41 @@
 .specs__image {
   align-self: flex-start;
   max-width: 65%;
+
+  @include large {
+    position: absolute;
+    left: 0;
+    top: 5em;
+  }
 }
 
 .specs__text {
   @extend %pText;
+
   padding: 0 2em;
   margin-bottom: 3em;
+
+  @include large {
+    display: none;
+  }
+}
+
+.specs__text--large {
+  @extend %pText;
+
+  display: none;
+
+  @include large {
+    display: initial;
+  }
 }
 
 .specs__cta {
   @extend %baseBtn;
+
+  @include large {
+    margin-top: 1em;
+  }
 }
 
 .app {
@@ -128,6 +294,11 @@
   flex-direction: column;
   align-items: center;
   padding: 0 1em 3em;
+
+  @include large {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
 }
 
 .app__image {
@@ -135,11 +306,41 @@
   margin-top: -9em;
 }
 
+.app__textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include large {
+    padding-right: 7em;
+    max-width: 50%;
+  }
+}
+
 .app__text {
   @extend %pText;
+
   margin: 2em;
+
+  @include large {
+    display: none;
+  }
+}
+
+.app__text--large {
+  display: none;
+
+  @include large {
+    display: initial;
+  }
 }
 
 .app__cta {
   @extend %baseBtn;
+
+  margin: auto;
+
+  @include large {
+    margin: initial;
+  }
 }
