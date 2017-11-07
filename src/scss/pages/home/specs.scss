@@ -1,0 +1,65 @@
+.specs {
+  background-color: $black;
+  padding: 3em 0 13em;
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  align-items: center;
+  min-height: 80vh;
+  position: relative;
+  z-index: -1;
+
+  @include large {
+    > * {
+      max-width: 50%;
+    }
+
+    align-items: left;
+    padding-left: 50%;
+    justify-content: center;
+  }
+}
+
+.specs__title {
+  margin-top: 0;
+}
+
+.specs__image {
+  align-self: flex-start;
+  max-width: 65%;
+
+  @include large {
+    position: absolute;
+    left: 0;
+    top: 5em;
+  }
+}
+
+.specs__text {
+  @extend %pText;
+
+  padding: 0 2em;
+  margin-bottom: 3em;
+
+  @include large {
+    display: none;
+  }
+}
+
+.specs__text--large {
+  @extend %pText;
+
+  display: none;
+
+  @include large {
+    display: initial;
+  }
+}
+
+.specs__cta {
+  @extend %baseBtn;
+
+  @include large {
+    margin-top: 1em;
+  }
+}
