@@ -1,0 +1,31 @@
+.experience {
+  padding: 3em 2em;
+  text-align: center;
+  background: grey;
+  min-height: 80vh;
+
+  @include large {
+    padding-bottom: 5em;
+  }
+}
+
+.experience__text {
+  display: none;
+  color: $white;
+  font-size: em(20);
+  max-width: 35vw;
+  margin: 30vh auto;
+  text-align: left;
+
+  @include large {
+    display: block;
+  }
+}
+
+.experience__cta {
+  @extend %baseBtn;
+
+  color: $white;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px $dark;
+}

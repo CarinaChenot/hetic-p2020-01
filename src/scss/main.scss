@@ -1,14 +1,15 @@
 @charset 'UTF-8';
 
 // 1. Helpers
+@import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
 @import 'abstracts/config';
 @import 'abstracts/media-queries';
+@import 'abstracts/placeholders';
 
 // 2. Base
 @import 'base/normalize.css';
-@import 'base/variables';
 @import 'base/base';
 
 // 3. Layout
