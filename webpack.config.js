@@ -20,7 +20,10 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     hot: true,
-    open: true
+    open: true,
+    historyApiFallback: {
+      index: 'index.html',
+    },
   },
   module: {
     rules: [
@@ -70,9 +73,14 @@ module.exports = {
     require('autoprefixer'),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Index',
-      template: './src/views/home.pug',
+      title: 'Main',
+      template: './src/views/main.pug',
       filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Home',
+      template: './src/views/home.pug',
+      filename: 'home.html',
     }),
     new HtmlWebpackPlugin({
       title: 'About',
@@ -83,6 +91,11 @@ module.exports = {
       title: 'Story',
       template: './src/views/story.pug',
       filename: 'story.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Test',
+      template: './src/views/test.pug',
+      filename: 'test.html',
     }),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',
