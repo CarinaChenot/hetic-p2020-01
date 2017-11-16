@@ -1,8 +1,9 @@
+
 // import * as helmetJson from '../3d/scene.json'
 let helmetJson = require('../3d/scene.json')
 
-var THREE = require('three')
-var OrbitControls = require('three-orbit-controls')(THREE)
+const THREE = require('three')
+const OrbitControls = require('three-orbit-controls')(THREE)
 
 class Helmet {
   constructor() {
@@ -61,7 +62,11 @@ class Helmet {
     let loader = new THREE.ObjectLoader()
     let that = this
 
+<<<<<<< HEAD
     loader.load(helmetJson, function(object) {
+=======
+    loader.load(require('../3d/scene.json'), function(object) {
+>>>>>>> cc47ac10a2a40cf713babab0d350c4e9563106e4
       object.name = 'helmet'
       that.helmetObj.add(object)
       scene.add(that.helmetObj)
