@@ -1,3 +1,21 @@
 include partials/header.pug
 
+section.timeline
+    div.date
+        span.date__number 2
+        span.date__number 0
+        span.date__number 1
+        span.date__number 3
+    div.explain
+        div.explain__content
+            p.explain__contentDate 2013
+            h1.explain__contentTitle CrossHelmet Idea
+            p.explain__contentText The founder Arata has always had a passion for riding, he was 17 when he got his first motorcycle  and currently rides a Husqvarna SMS630.
+        img.explain__picture(src=require('../assets/images/lab-1.jpg'), alt="#")
+
+nav.timelineNav
+   div.timelineNav__item
+    div.timelineNav__itemLine
+    a.timelineNav__itemDate(href="#") 2013
+
 include partials/footer.pug
