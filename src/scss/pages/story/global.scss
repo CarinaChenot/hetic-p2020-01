@@ -12,4 +12,8 @@
   padding-top: em(22);
   margin-top: 0;
   margin-bottom: 0;
+
+  @include medium {
+    font-size: em(48);
+  }
 }

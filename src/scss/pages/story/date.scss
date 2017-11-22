@@ -3,4 +3,8 @@
   color: $grey;
 
   @include flex();
+
+  @include medium {
+    font-size: em(250);
+  }
 }

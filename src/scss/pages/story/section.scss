@@ -3,4 +3,8 @@
   height: auto;
   padding: 0 em(33);
   margin-top: em(22);
+
+  @include medium {
+    padding: 0 em(170);
+  }
 }
