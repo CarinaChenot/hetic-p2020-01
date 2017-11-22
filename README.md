@@ -9,7 +9,7 @@ Front-end development school project for the [Crosshelmet kickstarter](https://w
 To properly run the project you will need:
 * [Node.js](https://nodejs.org/en/) v8+
 * [Yarn](https://yarnpkg.com/lang/en/) installed globally. Run `npm install -g yarn`
-* [Gulp-CLI](https://www.npmjs.com/package/gulp-cli) v1.4+
+* [Gulp-cli](https://www.npmjs.com/package/gulp-cli) v1.4+
 
 ### Installing
 
