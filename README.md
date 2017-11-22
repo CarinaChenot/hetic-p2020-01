@@ -6,9 +6,10 @@ Front-end development school project for the [Crosshelmet kickstarter](https://w
 
 ### Prerequisites
 
-To properly run the project you will need
+To properly run the project you will need:
 * [Node.js](https://nodejs.org/en/) v8+
 * [Yarn](https://yarnpkg.com/lang/en/) installed globally. Run `npm install -g yarn`
+* [Gulp-CLI](https://www.npmjs.com/package/gulp-cli) v1.4+
 
 ### Installing
 
@@ -48,8 +49,8 @@ yarn run build
 * Alexis Benoliel [@alexbeno](https://github.com/alexbeno)
 * Étienne Paven [@etienne-paven](https://github.com/etienne-paven)
 * Lucile Van Severen [@Lu-cile](https://github.com/Lu-cile)
-* Marina Ferreira-Duarte [@marinaferreirad](https://github.com/marinaferreirad)
+* Marina Ferreira Duarte [@marinaferreirad](https://github.com/marinaferreirad)
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License
