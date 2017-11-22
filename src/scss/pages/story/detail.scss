@@ -1,0 +1,22 @@
+.explain__contentDate {
+  font-size: em(18);
+  color: $green;
+}
+
+.explain__contentTitle {
+  font-size: em(20);
+  font-weight: $font-bold;
+  margin-bottom: em(8px);
+}
+
+.explain__contentText {
+  font-size: em(16);
+  line-height: em(24);
+  font-weight: $font-regular;
+}
+
+.explain__picture {
+  width: 100%;
+  height: auto;
+}
+

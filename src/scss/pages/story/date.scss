@@ -1,0 +1,6 @@
+.date {
+  font-size: em(144);
+  color: $grey;
+
+  @include flex();
+}

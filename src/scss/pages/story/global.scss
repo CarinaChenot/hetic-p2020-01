@@ -1,0 +1,14 @@
+.story {
+  background: $black;
+  color: $white;
+  font-family: $primary-font;
+}
+
+.timelineTitle {
+  font-size: em(36);
+  font-weight: $font-regular;
+  text-align: center;
+  padding-top: em(22);
+  margin-top: 0;
+  margin-bottom: 0;
+}
