@@ -52,7 +52,7 @@ module.exports = {
         use: 'pug-loader'
       },
        {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf|json)$/,
         use: [
           'file-loader'
         ]
