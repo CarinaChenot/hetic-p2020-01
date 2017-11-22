@@ -4,19 +4,21 @@
 }
 
 .explain__contentTitle {
-  font-size: em(20);
+  font-size: em(18);
   font-weight: $font-bold;
-  margin-bottom: em(8px);
+  margin-bottom: em(8);
 }
 
 .explain__contentText {
-  font-size: em(16);
-  line-height: em(24);
+  font-size: em(14);
+  line-height: em(28);
   font-weight: $font-regular;
+  margin-bottom: em(33);
 }
 
 .explain__picture {
   width: 100%;
   height: auto;
+  margin-top: em(33);
 }
 
