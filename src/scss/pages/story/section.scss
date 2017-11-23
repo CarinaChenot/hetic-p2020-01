@@ -7,4 +7,13 @@
   @include medium {
     padding: 0 em(170);
   }
+  
+
+  @include large {
+    height: 100vh;
+    padding: 0 em(230);
+    margin-top: em(0);
+
+    @include flex();
+  }
 }

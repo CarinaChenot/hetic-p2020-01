@@ -16,4 +16,8 @@
   @include medium {
     font-size: em(48);
   }
+
+  @include large {
+    display: none;
+  }
 }
