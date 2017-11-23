@@ -8,7 +8,7 @@ head
 header.header
   span.header__shape
   .header__wrapper
-    a.logo(href='index.html')
+    a.logo(href='index.html', data-link='home')
       include ../../assets/icons/logo.svg
       span.logo__title Crosshelmet
     .toggle
@@ -18,7 +18,7 @@ header.header
   .menu
     nav.menu__nav
       a.nav__link(href='#') Live the experience
-      a.nav__link.story-link(href='story.html') Discover the lab
+      a.nav__link.story-link(href='story.html', data-link='story') Discover the lab
       a.nav__link(href='#') Product Specs
     .menu__ctas
       a.menu__cta(href='#') Purcharse
