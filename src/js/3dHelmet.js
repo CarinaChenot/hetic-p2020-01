@@ -86,6 +86,8 @@ class Helmet {
   }
 }
 
-const helmet3d = new Helmet()
-helmet3d.init()
-helmet3d.render()
+if (document.querySelector('.render') != null) {
+  const helmet3d = new Helmet()
+  helmet3d.init()
+  helmet3d.render()
+}

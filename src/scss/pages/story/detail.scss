@@ -1,0 +1,71 @@
+.explain {
+  @include large {
+    width: 100%;
+
+    @include flex($justify: space-between);
+  }
+}
+
+.explain__contentDate {
+  font-size: em(18);
+  color: $green;
+
+  @include medium {
+    font-size: em(24);
+  }
+
+  @include large {
+    font-size: em(32);
+  }
+}
+
+.explain__contentTitle {
+  font-size: em(18);
+  font-weight: $font-bold;
+  margin-bottom: em(8);
+
+  @include medium {
+    font-size: em(28);
+    margin-bottom: em(16);
+  }
+
+  @include large {
+    font-size: em(32);
+  }
+}
+
+.explain__contentText {
+  font-size: em(14);
+  line-height: em(28);
+  font-weight: $font-regular;
+  margin-bottom: em(33);
+  opacity: 0.6;
+
+  @include medium {
+    font-size: em(20);
+    line-height: em(33);
+  }
+
+  @include large {
+    font-size: em(24);
+    line-height: em(33);
+  }
+}
+
+.explain__picture {
+  width: 100%;
+  height: auto;
+  margin-top: em(33);
+
+  @include medium {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: em(80);
+    margin-bottom: em(80);
+  }
+
+  @include large {
+    width: 30%;
+  }
+}
+

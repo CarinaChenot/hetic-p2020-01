@@ -1,79 +1,130 @@
 include partials/header.pug
 div.story
-    div.story__title Our Story
-    div.story__content
-        div.story__content__border
-        div.chrono
-            div.chrono__date
-                p.chrono__date__text 2013
-            div.chrono__event
-                div.chrono__event__point
-                p.chrono__event__text CrossHelmet Idea
-        div.chrono
-            div.chrono__date
-                p.chrono__date__text 2014
-            div.chrono__event
-                div.chrono__event__point
-                p.chrono__event__text Milestone #1 : design prototype
-            img.chrono__image(src=require('../assets/images/design_prototype.png'))
-        div.chrono
-            div.chrono__date
-                p.chrono__date__text 2015
-            div.chrono__event
-                div.chrono__event__point
-                p.chrono__event__text Milestone #2 : engineering prototype
-            div.chrono__event
-                div.chrono__event__point
-                p.chrono__event__text Milestone #3 : proof of concept prototype
-            img.chrono__image(src=require('../assets/images/Engenirie.png'))
-        div.chrono
-            div.chrono__date
-                p.chrono__date__text 2015
-            div.chrono__event--months
-                div.chrono__event--months__point
-                div.chrono__event--months__content
-                  p.chrono__event--months__month May
-                  p.chrono__event--months__text Milestone #4 : engineering validation
-            img.chrono__image(src=require('../assets/images/validation.png'))
-            div.chrono__event--months
-                div.chrono__event--months__point
-                div.chrono__event--months__content
-                  p.chrono__event--months__month September
-                  p.chrono__event--months__text Exhibited at TechCrunch London
-            div.chrono__event--months
-                div.chrono__event--months__point
-                div.chrono__event--months__content
-                  p.chrono__event--months__month December
-                  p.chrono__event--months__text Milestone #4 : engineering validation
-        div.chrono
-            div.chrono__date
-                p.chrono__date__text 2015
-            div.chrono__event--months
-                div.chrono__event--months__point
-                div.chrono__event--months__content
-                  p.chrono__event--months__month Febuary
-                  p.chrono__event--months__text Milestone #5 : design validation
-            img.chrono__image(src=require('../assets/images/validation_design.png'))
-            div.chrono__event--months
-                div.chrono__event--months__point
-                div.chrono__event--months__content
-                  p.chrono__event--months__month March
-                  p.chrono__event--months__text Exhibited at SXSW
-            div.chrono__event--months
-                div.chrono__event--months__point
-                div.chrono__event--months__content
-                  p.chrono__event--months__month September
-                  p.chrono__event--months__text KickStarter
-            div.chrono__event--months
-                div.chrono__event--months__point
-                div.chrono__event--months__content
-                  p.chrono__event--months__month December
-                  p.chrono__event--months__text Set up tooling
-            img.chrono__image(src=require('../assets/images/set_up.png'))
-        div.chrono
-            div.chrono__date
-                p.chrono__date__text 2018
-            div.chrono__event.chrono__event--end
-                div.chrono__event__point.chrono__event__point--end
-                p.chrono__event__text.chrono__event__text--end Shipping
+    h1.timelineTitle Our story
+
+    section.timeline
+        div.date
+            span.date__number 2
+            span.date__number 0
+            span.date__number 1
+            span.date__number 3
+
+    section.timeline  
+        div.explain
+            div.explain__content
+                p.explain__contentDate 2013
+                h1.explain__contentTitle CrossHelmet Idea
+                p.explain__contentText The founder Arata has always had a passion for riding, he was 17 when he got his first motorcycle  and currently rides a Husqvarna SMS630.
+
+    section.timeline
+        div.date
+            span.date__number 2
+            span.date__number 0
+            span.date__number 1
+            span.date__number 4
+
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate 2014
+                h1.explain__contentTitle Milestone #1 : design prototype
+                p.explain__contentText The unique and functional design of the CrossHelmet is what sets it apart. Our team has years of combined experience working on world-renowned products like the Yamaha MT-09 and the Walkman - experience they’ve applied to our product.
+            img.explain__picture(src=require('../assets/images/story/designprototype.jpg'), alt="#")
+
+    section.timeline
+        div.date
+            span.date__number 2
+            span.date__number 0
+            span.date__number 1
+            span.date__number 5
+
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate 2015
+                h1.explain__contentTitle Milestone #2 : engineering prototype
+                h1.explain__contentTitle Milestone #3 : proof of concept prototype
+            img.explain__picture(src=require('../assets/images/story/Engeenirie.jpg'), alt="#")
+
+    section.timeline
+        div.date
+            span.date__number 2
+            span.date__number 0
+            span.date__number 1
+            span.date__number 6
+
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate May 2016
+                h1.explain__contentTitle Milestone #4 : engineering validation
+            img.explain__picture(src=require('../assets/images/story/validation.jpg'), alt="#")
+
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate September 2016 
+                h1.explain__contentTitle Exhibited at TechCrunch London
+                p.explain__contentText TechCrunch Disrupt is the world’s leading authority in debuting revolutionary startups, introducing game-changing technologies, and discussing what’s top of mind for the tech industry’s key innovators. Disrupt gathers the best and brightest entrepreneurs, investors, hackers, and tech fans for on-stage interviews, the Startup Battlefield competition, a 24-hour Hackathon, Startup Alley, Hardware Alley, and After Parties.
+    
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate December 2016
+                h1.explain__contentTitle Milestone #4 : engineering validation
+
+    section.timeline
+        div.date
+            span.date__number 2
+            span.date__number 0
+            span.date__number 1
+            span.date__number 7
+
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate Febuary 2017
+                h1.explain__contentTitle Milestone #5 : design validation
+            img.explain__picture(src=require('../assets/images/story/validationdesign.jpg'), alt="#")
+
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate March 2017
+                h1.explain__contentTitle Exhibited at SXSW
+                p.explain__contentText South by Southwest (SXSW) is a collection of music festivals (SXSW Music), cinema (SXSW Film) and interactive media (SXSW Interactive)
+
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate September 2017
+                h1.explain__contentTitle Kicksarter
+                p.explain__contentText Kickstarter is a US crowdfunding company. We have collected $ 344,336 committed on $ 100,000
+
+    section.timeline
+        div.explain
+            div.explain__content
+                p.explain__contentDate December 2017
+                h1.explain__contentTitle Set up tooling
+            img.explain__picture(src=require('../assets/images/story/setup.jpg'), alt="#")
+
+    section.timeline
+            div.date
+                span.date__number 2
+                span.date__number 0
+                span.date__number 1
+                span.date__number 8
+
+    section.timeline
+            div.explain
+                div.explain__content
+                    p.explain__contentDate 2018
+                    h1.explain__contentTitle Shipping
+
+
+    nav.timelineNav
+        div.timelineNav__item
+            div.timelineNav__itemLine
+            a.timelineNav__itemDate(href="#") 2013
+
 include partials/footer.pug

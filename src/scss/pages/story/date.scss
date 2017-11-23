@@ -1,0 +1,14 @@
+.date {
+  font-size: em(144);
+  color: $grey;
+
+  @include flex();
+
+  @include medium {
+    font-size: em(250);
+  }
+
+  @include large {
+    font-size: em(600);
+  }
+}
