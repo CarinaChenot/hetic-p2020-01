@@ -1,4 +1,8 @@
-# Crosshelmet website project
+# Crosshelmet website project ![](https://img.shields.io/travis/CarinaChenot/hetic-p2020-01/dev.svg?style=flat-square)
+
+[![](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://crosshelmet.netlify.com)
+
+Project url: [https://crosshelmet.netlify.com](https://crosshelmet.netlify.com)
 
 Front-end development school project for the [Crosshelmet kickstarter](https://www.kickstarter.com/projects/491835187/crosshelmet-the-smart-motorcycle-helmet?lang=fr)
 
