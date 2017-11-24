@@ -9,7 +9,7 @@ const isProd = (process.env.NODE_ENV === 'production');
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
   },
   devtool: isProd ? '' : 'eval-source-map',
   output: {
@@ -20,7 +20,8 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     hot: true,
-    open: true
+    open: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -51,7 +52,7 @@ module.exports = {
         test: /\.pug$/,
         use: 'pug-loader'
       },
-       {
+      {
         test: /\.(woff|woff2|eot|ttf|otf|json)$/,
         use: [
           'file-loader'
@@ -63,26 +64,45 @@ module.exports = {
           'file-loader',
           'image-webpack-loader'
         ],
-      }
+      },
+      {
+        test: /\.(htaccess)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '.htaccess',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     require('autoprefixer'),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Index',
-      template: './src/views/home.pug',
+      title: 'Main',
+      template: './src/views/main.pug',
       filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Home',
+      template: './src/views/home.pug',
+      filename: 'home.html',
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       title: 'About',
       template: './src/views/about.pug',
       filename: 'about.html',
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       title: 'Story',
       template: './src/views/story.pug',
       filename: 'story.html',
+      inject: false,
     }),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',
