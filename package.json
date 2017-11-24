@@ -8,7 +8,8 @@
   "repository": "https://github.com/CarinaChenot/hetic-p2020-01.git",
   "scripts": {
     "dev": "webpack-dev-server --open",
-    "build": "NODE_ENV=production webpack -p"
+    "build": "NODE_ENV=production webpack -p",
+    "test": "NODE_ENV=production webpack -p"
   },
   "browserslist": [
     "last 2 versions",
