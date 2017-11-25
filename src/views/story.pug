@@ -2,7 +2,7 @@ include partials/header.pug
 div.story
     h1.timelineTitle Our story
 
-    section.timeline.timeline--1.timeline--active
+    section.timeline.timeline--1.timeline--active(data-date="2013")
         div.date
             span.date__number 2
             span.date__number 0
@@ -16,7 +16,7 @@ div.story
                 h1.explain__contentTitle CrossHelmet Idea
                 p.explain__contentText The founder Arata has always had a passion for riding, he was 17 when he got his first motorcycle  and currently rides a Husqvarna SMS630.
 
-    section.timeline.timeline--3
+    section.timeline.timeline--3(data-date="2014")
         div.date
             span.date__number 2
             span.date__number 0
@@ -31,7 +31,7 @@ div.story
                 p.explain__contentText The unique and functional design of the CrossHelmet is what sets it apart. Our team has years of combined experience working on world-renowned products like the Yamaha MT-09 and the Walkman - experience they’ve applied to our product.
             img.explain__picture(src=require('../assets/images/story/designprototype.jpg'), alt="#")
 
-    section.timeline.timeline--5
+    section.timeline.timeline--5(data-date="2015")
         div.date
             span.date__number 2
             span.date__number 0
@@ -46,7 +46,7 @@ div.story
                 h1.explain__contentTitle Milestone #3 : proof of concept prototype
             img.explain__picture(src=require('../assets/images/story/Engeenirie.jpg'), alt="#")
 
-    section.timeline.timeline--7
+    section.timeline.timeline--7(data-date="2016")
         div.date
             span.date__number 2
             span.date__number 0
@@ -73,7 +73,7 @@ div.story
                 p.explain__contentDate December 2016
                 h1.explain__contentTitle Milestone #4 : engineering validation
 
-    section.timeline.timeline--11
+    section.timeline.timeline--11(data-date="2017")
         div.date
             span.date__number 2
             span.date__number 0
@@ -108,7 +108,7 @@ div.story
                 h1.explain__contentTitle Set up tooling
             img.explain__picture(src=require('../assets/images/story/setup.jpg'), alt="#")
 
-    section.timeline.timeline--16
+    section.timeline.timeline--16(data-date="2018")
             div.date
                 span.date__number 2
                 span.date__number 0
@@ -122,9 +122,24 @@ div.story
                     h1.explain__contentTitle Shipping
 
 
-    nav.timelineNav
-        div.timelineNav__item
-            div.timelineNav__itemLine
-            a.timelineNav__itemDate(href="#") 2013
+nav.timelineNav
+    div.timelineNav__item.timelineNav__item--2013.timelineNav__item--active
+        div.timelineNav__itemLine
+        a.timelineNav__itemDate(href="#") 2013
+    div.timelineNav__item.timelineNav__item--2014
+        div.timelineNav__itemLine
+        a.timelineNav__itemDate(href="#") 2014
+    div.timelineNav__item.timelineNav__item--2015
+        div.timelineNav__itemLine
+        a.timelineNav__itemDate(href="#") 2015
+    div.timelineNav__item.timelineNav__item--2016
+        div.timelineNav__itemLine
+        a.timelineNav__itemDate(href="#") 201§
+    div.timelineNav__item.timelineNav__item--2017
+        div.timelineNav__itemLine
+        a.timelineNav__itemDate(href="#") 2017
+    div.timelineNav__item.timelineNav__item--2018
+        div.timelineNav__itemLine
+        a.timelineNav__itemDate(href="#") 2018
 
 include partials/footer.pug

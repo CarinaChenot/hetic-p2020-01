@@ -50,25 +50,40 @@ class Timeline {
     }
     this.update()
   }
+  nav(attribute) {
+    let activeItem = document.querySelector('.timelineNav__item--active')
+    if (activeItem != null) {
+      activeItem.classList.remove('timelineNav__item--active')
+    }
+
+    let navigationItem = document.querySelector('.timelineNav__item--' + attribute)
+    navigationItem.classList.add('timelineNav__item--active')
+  }
   update() {
     let activeItem = document.querySelector('.timeline--active')
     this.content = document.querySelector('.timeline--' + this.index)
     activeItem.classList.remove('timeline--active')
     this.content.classList.add('timeline--active')
+    if (this.content.getAttribute('data-date')) {
+      let attribute = this.content.getAttribute('data-date')
+      this.nav(attribute)
+    }
     this.scrollEvent()
   }
 
   lethargyScroll(e) {
     let that = this
-    if (that.jamScroll === false) {
-      e.preventDefault()
-      e.stopPropagation()
-      if (that.lethargy.check(e) === 1) {
-        that.up()
-        that.jam()
-      } else if (that.lethargy.check(e) === -1) {
-        that.down()
-        that.jam()
+    if (window.innerWidth > 768) {
+      if (that.jamScroll === false) {
+        e.preventDefault()
+        e.stopPropagation()
+        if (that.lethargy.check(e) === 1) {
+          that.up()
+          that.jam()
+        } else if (that.lethargy.check(e) === -1) {
+          that.down()
+          that.jam()
+        }
       }
     }
   }

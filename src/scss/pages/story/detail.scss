@@ -1,6 +1,9 @@
 .explain {
   @include large {
     width: 100%;
+    transform: translateY(-30%);
+    opacity: 1;
+    transition: all $transition-bezier4 0.5s 0.3s;
 
     @include flex($justify: space-between);
   }
@@ -66,6 +69,24 @@
 
   @include large {
     width: 30%;
+    transform: translateY(60%);
+    opacity: 1;
+    transition: all $transition-bezier4 0.5s 0.3s;
   }
 }
 
+.timeline--active {
+  @include large {
+    .explain {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all $transition-bezier4 0.5s 0.3s;
+    }
+
+    .explain__picture {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all $transition-bezier4 0.5s 0.3s;
+    }
+  }
+}
