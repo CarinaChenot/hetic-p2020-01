@@ -45,6 +45,7 @@ yarn run build
 * SCSS with BEM naming convention
 * ES6
 * Webpack
+* Multilingual support with [i18next](https://github.com/i18next/i18next)
 
 ## Authors
 
