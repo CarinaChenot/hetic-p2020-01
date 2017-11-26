@@ -27,6 +27,15 @@ history.listen((location, action) => {
   }
 })
 
+history.listen((location, action) => {
+  if (location.pathname === '/story') {
+    const timeline = new Timeline()
+    timeline.loading()
+  } else {
+    document.querySelector('body').classList.remove('body--story')
+  }
+})
+
 if (location.pathname === '/story') {
   const timeline = new Timeline()
   timeline.loading()
