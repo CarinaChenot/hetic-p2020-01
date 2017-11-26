@@ -2,13 +2,6 @@ const Lethargy = require('lethargy').Lethargy
 
 class Timeline {
   constructor() {
-    this.body = document.querySelector('body')
-    this.main = document.querySelector('.story')
-    this.content = document.querySelector('.timeline--active')
-    this.nav = document.querySelectorAll('.timelineNav__item')
-    this.allSlide = document.querySelectorAll('.timeline').length
-    this.url = document.location.href
-    this.pageUrl = this.url.substring(this.url.lastIndexOf('/') + 1)
     this.jamScroll = false
     this.translate = 0
     this.index = 0
@@ -179,15 +172,28 @@ class Timeline {
      * @var this.body select the body
      */
 
-    if (this.pageUrl === 'story.html') {
-      this.body.classList.add('body--story')
-      this.initScroll()
-      this.initNav()
-    } else {
-      this.body.classList.remove('body--story')
-    }
+    this.body.classList.add('body--story')
+
+    this.initScroll()
+    this.initNav()
+  }
+  selects() {
+    this.body = document.querySelector('body')
+    this.main = document.querySelector('.story')
+    this.content = document.querySelector('.timeline--active')
+    this.nav = document.querySelectorAll('.timelineNav__item')
+    this.allSlide = document.querySelectorAll('.timeline').length
+  }
+  loading() {
+    let that = this
+    let watch = setInterval(function() {
+      if (document.querySelector('.story') != null) {
+        that.selects()
+        that.init()
+        clearInterval(watch)
+      }
+    }, 10)
   }
 }
 
-let timeline = new Timeline()
-timeline.init()
+export default Timeline

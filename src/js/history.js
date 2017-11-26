@@ -1,4 +1,5 @@
 import createHistory from 'history/createBrowserHistory'
+import Timeline from './Timeline'
 
 const history = createHistory()
 
@@ -18,7 +19,20 @@ history.listen((location, action) => {
   if (menu.classList.contains('isOpen')) {
     menu.classList.remove('isOpen')
   }
+  if (location.pathname === '/story') {
+    const timeline = new Timeline()
+    timeline.loading()
+  } else {
+    document.querySelector('body').classList.remove('body--story')
+  }
 })
+
+if (location.pathname === '/story') {
+  const timeline = new Timeline()
+  timeline.loading()
+} else {
+  document.querySelector('body').classList.remove('body--story')
+}
 
 getContent(history.location.pathname)
 
