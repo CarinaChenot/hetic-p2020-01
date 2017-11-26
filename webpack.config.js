@@ -76,6 +76,21 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(yaml)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].json',
+              context: 'src',
+            },
+          },
+          {
+            loader: 'yaml-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -102,6 +117,12 @@ module.exports = {
       title: 'Story',
       template: './src/views/story.pug',
       filename: 'story.html',
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
+      title: '404',
+      template: './src/views/404.pug',
+      filename: '404.html',
       inject: false,
     }),
     new ExtractTextPlugin({
