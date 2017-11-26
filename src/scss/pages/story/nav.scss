@@ -1,3 +1,70 @@
 .timelineNav {
   display: none;
+
+  @include large {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 100vh;
+    padding-right: 25px;
+
+    @include flex($direction: column, $align: flex-end);
+  }
 }
+
+.timelineNav__item {
+  @include large {
+    margin-bottom: em(15);
+
+    @include flex($direction: row-reverse);
+  }
+}
+
+.timelineNav__itemDate {
+  @include large {
+    font-size: em(24);
+    color: $green;
+    margin-right: em(15);
+    opacity: 0;
+    transition: all $transition-bezier4 0.3s;
+  }
+}
+
+.timelineNav__itemLine {
+  @include large {
+    width: em(20);
+    height: em(4);
+    background: $grey;
+    transition: all $transition-bezier4 0.3s;
+  }
+}
+
+.timelineNav__item--active {
+  @include large {
+    .timelineNav__itemLine {
+      background: $green;
+      transition: all $transition-bezier4 0.3s;
+    }
+
+    .timelineNav__itemDate {
+      opacity: 1;
+      transition: all $transition-bezier4 0.3s;
+    }
+  }
+}
+
+.timelineNav__item:hover {
+  @include large {
+    .timelineNav__itemLine {
+      background: $green;
+      transition: all $transition-bezier4 0.3s;
+    }
+
+    .timelineNav__itemDate {
+      opacity: 1;
+      transition: all $transition-bezier4 0.3s;
+    }
+  }
+}
+

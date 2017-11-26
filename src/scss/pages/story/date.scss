@@ -12,3 +12,38 @@
     font-size: em(600);
   }
 }
+
+.date__number {
+  transform: translateY(20%);
+  opacity: 0.5;
+  transition: all $transition-bezier1 0.3s;
+
+  @include large {
+    &:nth-child(3) {
+      transform: translateY(-20%);
+    }
+  }
+}
+
+.timeline--active {
+  .date__number {
+    @include large {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all $transition-bezier4 0.5s 0.3s;
+
+      &:nth-child(2) {
+        transition: all $transition-bezier4 0.5s 0.4s;
+      }
+
+      &:nth-child(3) {
+        transition: all $transition-bezier4 0.5s 0.5s;
+      }
+
+      &:nth-child(4) {
+        transition: all $transition-bezier4 0.5s 0.6s;
+      }
+    }
+  }
+}
+
