@@ -1,5 +1,5 @@
 import createHistory from 'history/createBrowserHistory'
-import Timeline from './Timeline'
+import Timeline from './timeline'
 
 const history = createHistory()
 
