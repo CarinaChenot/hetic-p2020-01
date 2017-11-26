@@ -46,11 +46,16 @@
     "three-orbit-controls": "^82.1.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.7.1",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^2.9.1",
+    "yaml-loader": "^0.5.0"
   },
   "dependencies": {
     "lethargy": "^1.0.4",
     "history": "^4.7.2",
+    "i18next": "^10.2.1",
+    "i18next-browser-languagedetector": "^2.1.0",
+    "i18next-localstorage-cache": "^1.1.1",
+    "i18next-xhr-backend": "^1.5.0",
     "three": "^0.87.1"
   }
 }

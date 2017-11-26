@@ -7,4 +7,6 @@ import './js/scroll_anim.js'
 import './js/timeline'
 import './js/history.js'
 
-// import './js/3dHelmet'
+import './js/translation.js'
+
+import './js/3dHelmet'
