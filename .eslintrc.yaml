@@ -21,3 +21,4 @@ rules:
   object-curly-spacing:
     - error
     - always
+  handle-callback-err: 0
