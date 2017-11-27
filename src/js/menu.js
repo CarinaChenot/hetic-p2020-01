@@ -1,9 +1,15 @@
-const menuBtn = document.querySelector('.toggle')
-const header = document.querySelector('.header')
-
-menuBtn.addEventListener('click', e => toggleState(e))
-
-function toggleState(e) {
-  if (header.classList.contains('isOpen')) header.classList.remove('isOpen')
-  else header.classList.add('isOpen')
+export default class Menu {
+  constructor() {
+    this.$button = document.querySelector('.toggle')
+    this.$header = document.querySelector('.header')
+    this.isOpen = this.$header.classList.contains('isOpen')
+    this.$button.addEventListener('click', this.toggleState.bind(this))
+  }
+  toggleState() {
+    this.isOpen = !this.isOpen
+    this.updateDOM()
+  }
+  updateDOM() {
+    this.isOpen ? this.$header.classList.add('isOpen') : this.$header.classList.remove('isOpen')
+  }
 }
