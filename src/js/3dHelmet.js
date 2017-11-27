@@ -1,4 +1,4 @@
-let helmetJson = require('../3d/scene.json')
+let helmetJson = require('../assets/3D/scene.json')
 
 const THREE = require('three')
 const OrbitControls = require('three-orbit-controls')(THREE)
