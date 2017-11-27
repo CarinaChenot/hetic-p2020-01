@@ -3,9 +3,12 @@ import Backend from 'i18next-xhr-backend'
 import Cache from 'i18next-localstorage-cache'
 import LngDetector from 'i18next-browser-languagedetector'
 
-require('../locales/en.yaml')
-require('../locales/fr.yaml')
-// require('../locales/jp.yaml')
+require('../locales/en/partials.yaml')
+require('../locales/en/home.yaml')
+require('../locales/en/story.yaml')
+require('../locales/fr/partials.yaml')
+require('../locales/fr/home.yaml')
+require('../locales/fr/story.yaml')
 
 const lngBtn = document.querySelectorAll('[i18n-options]')
 
@@ -24,9 +27,10 @@ i18next
     cache: {
       enabled: true,
     },
+    ns: ['partials', 'home', 'story'],
     fallbackLng: 'en',
     backend: {
-      loadPath: '/locales/{{lng}}.json',
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
     debug: true,
   })
