@@ -1,5 +1,6 @@
 import createHistory from 'history/createBrowserHistory'
 import { initTimeline } from './timeline'
+import { initTranslation } from './translation'
 
 const HOME_PAGE = 'home'
 const STORY_PAGE = 'story'
@@ -38,6 +39,7 @@ class Navigation {
   }
   updateDOM(data) {
     this.$content.innerHTML = data
+    initTranslation()
 
     switch (this.currentPage) {
       case HOME_PAGE:

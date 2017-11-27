@@ -29,9 +29,6 @@ i18next
       loadPath: '/locales/{{lng}}.json',
     },
     debug: true,
-  },
-  function(err, t) {
-    updateContent(getNodes())
   })
 
 i18next.on('languageChanged', () => {
@@ -46,4 +43,8 @@ function updateContent(nodes) {
 
 function getNodes() {
   return document.querySelectorAll('[data-i18n]')
+}
+
+export function initTranslation() {
+  updateContent(getNodes())
 }
