@@ -1,9 +1,13 @@
+import { Navigation } from './navigation'
 import Menu from './menu'
 import './scroll_anim'
-import './history'
 import './translation'
 import './3dHelmet'
 // import './timeline'
 
-/* eslint-disable no-unused-vars */
+const nav = new Navigation()
 const menu = new Menu()
+
+nav.history.listen(() => {
+  if (menu.isOpen) menu.setIsOpen(false)
+})

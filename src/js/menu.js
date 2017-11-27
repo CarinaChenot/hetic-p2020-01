@@ -5,6 +5,10 @@ export default class Menu {
     this.isOpen = this.$header.classList.contains('isOpen')
     this.$button.addEventListener('click', this.toggleState.bind(this))
   }
+  setIsOpen(isOpen) {
+    this.isOpen = isOpen
+    this.updateDOM()
+  }
   toggleState() {
     this.isOpen = !this.isOpen
     this.updateDOM()
