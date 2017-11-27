@@ -86,7 +86,7 @@ class Helmet {
   }
 }
 
-if (document.querySelector('.render') != null) {
+export function init3dHelmet() {
   const helmet3d = new Helmet()
   helmet3d.init()
   helmet3d.render()

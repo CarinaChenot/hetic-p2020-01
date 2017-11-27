@@ -1,6 +1,7 @@
 import createHistory from 'history/createBrowserHistory'
 import { initTimeline } from './timeline'
 import { initTranslation } from './translation'
+import { init3dHelmet } from './3dHelmet'
 
 const HOME_PAGE = 'home'
 const STORY_PAGE = 'story'
@@ -64,7 +65,7 @@ class Navigation {
 
 function initHome() {
   // Run scrips for home
-  console.log('Init home scripts')
+  init3dHelmet()
 }
 
 function initStory() {
