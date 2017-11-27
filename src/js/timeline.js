@@ -196,4 +196,12 @@ class Timeline {
   }
 }
 
-export default Timeline
+function initTimeline() {
+  const timeline = new Timeline()
+  timeline.loading()
+}
+
+export {
+  Timeline,
+  initTimeline,
+}

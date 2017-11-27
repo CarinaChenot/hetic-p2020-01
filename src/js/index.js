@@ -3,7 +3,6 @@ import Menu from './menu'
 import './scroll_anim'
 import './translation'
 import './3dHelmet'
-// import './timeline'
 
 const nav = new Navigation()
 const menu = new Menu()

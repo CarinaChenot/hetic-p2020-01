@@ -1,4 +1,5 @@
 import createHistory from 'history/createBrowserHistory'
+import { initTimeline } from './timeline'
 
 const HOME_PAGE = 'home'
 const STORY_PAGE = 'story'
@@ -66,7 +67,7 @@ function initHome() {
 
 function initStory() {
   // Run scrips for story
-  console.log('Init story scripts')
+  initTimeline()
 }
 
 export {
