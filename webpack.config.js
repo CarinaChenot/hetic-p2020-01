@@ -131,9 +131,9 @@ module.exports = {
       filename: 'fonction.html',
     }),
     new HtmlWebpackPlugin({
-      title: 'Gettheapp',
-      template: './src/views/gettheapp.pug',
-      filename: 'gettheapp.html',
+      title: 'App',
+      template: './src/views/app.pug',
+      filename: 'app.html',
     }),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',
