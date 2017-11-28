@@ -1,49 +1,114 @@
 .hero {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
    /* stylelint-disable */
-  grid-template-areas:
-    "hero__image hero__image"
-    "hero__cta hero__cta"
-    "hero__description hero__description";
-
   @include medium {
+    display: grid;
     margin: 0 3em;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-      "hero__image"
+      "hero__helmet"
       "hero__description"
       "hero__cta";
   }
 
   @include large {
+    display: grid;
     margin: 2em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "hero__image hero__description"
-      "hero__image hero__cta";
+      "hero__helmet hero__description"
+      "hero__helmet hero__cta";
     /* stylelint-enable */
   }
 }
 
-.hero__image {
-  grid-area: hero__image;
-  max-width: 100%;
-  padding: 3em 2em;
-  margin: auto;
+.hero__helmet {
+  grid-area: hero__helmet;
+  position: relative;
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
 
   @include medium {
     margin: initial;
   }
 
   @include large {
-    margin: auto;
-    padding: 5em;
-    max-width: 70%;
+
   }
+}
+
+.hero__loader {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+
+  &.isLoading {
+    @include flex();
+  }
+}
+
+.hero__loaderCircle {
+  background: $green;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  margin: 0 10px;
+}
+
+.hero__loaderCircle--one {
+  transform: translateY(10px);
+  animation: circle-one ease 0.6s infinite alternate;
+
+  @include keyframes(circle-one) {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.hero__loaderCircle--two {
+  transform: translateY(-5px);
+  animation: circle-two ease 0.6s 0.1s infinite alternate;
+
+  @include keyframes(circle-two) {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.hero__loaderCircle--three {
+  transform: translateY(-10px);
+  animation: circle-three ease 0.6s 0.2s infinite alternate;
+
+  @include keyframes(circle-three) {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.hero__image {
+  display: none;
 }
 
 .hero__ctaWrapper {
