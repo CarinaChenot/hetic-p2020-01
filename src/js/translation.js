@@ -6,9 +6,13 @@ import LngDetector from 'i18next-browser-languagedetector'
 require('../locales/en/partials.yaml')
 require('../locales/en/home.yaml')
 require('../locales/en/story.yaml')
+require('../locales/en/specs.yaml')
+require('../locales/en/features.yaml')
 require('../locales/fr/partials.yaml')
 require('../locales/fr/home.yaml')
 require('../locales/fr/story.yaml')
+require('../locales/fr/specs.yaml')
+require('../locales/fr/features.yaml')
 
 const lngBtn = document.querySelectorAll('[i18n-options]')
 
@@ -27,7 +31,7 @@ i18next
     cache: {
       enabled: true,
     },
-    ns: ['partials', 'home', 'story'],
+    ns: ['partials', 'home', 'story', 'specs', 'features'],
     fallbackLng: 'en',
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
