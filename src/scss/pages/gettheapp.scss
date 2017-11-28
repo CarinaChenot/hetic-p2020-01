@@ -1,0 +1,11 @@
+html {
+    background-color: $white;
+}
+  
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+@import 'gettheapp/connectivity';
+@import 'gettheapp/content';

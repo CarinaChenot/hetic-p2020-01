@@ -1,6 +1,7 @@
 import { Navigation } from './navigation'
 import Menu from './menu'
 import './scroll_anim'
+import './anim_toggle.js'
 import './translation'
 import './3dHelmet'
 
