@@ -126,9 +126,9 @@ module.exports = {
       inject: false,
     }),
     new HtmlWebpackPlugin({
-      title: 'Function',
-      template: './src/views/fonction.pug',
-      filename: 'fonction.html',
+      title: 'Specs',
+      template: './src/views/specs.pug',
+      filename: 'specs.html',
     }),
     new HtmlWebpackPlugin({
       title: 'App',

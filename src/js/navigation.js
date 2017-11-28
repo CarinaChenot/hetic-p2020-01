@@ -1,10 +1,14 @@
 import createHistory from 'history/createBrowserHistory'
 import { initTimeline } from './timeline'
+import { initAnimToggle } from './anim_toggle'
+import { initFeatures } from './features'
 import { initTranslation } from './translation'
 import { init3dHelmet } from './3dHelmet'
 
 const HOME_PAGE = 'home'
 const STORY_PAGE = 'story'
+const SPECS_PAGE = 'specs'
+const APP_PAGE = 'app'
 const ERR_PAGE = '404'
 const STORAGE_KEY = 'ch_page_'
 
@@ -50,6 +54,12 @@ class Navigation {
       case STORY_PAGE:
         initStory()
         break
+      case SPECS_PAGE:
+        initSpecs()
+        break
+      case APP_PAGE:
+        initApp()
+        break
     }
   }
   getContent() {
@@ -84,13 +94,19 @@ class Navigation {
 }
 
 function initHome() {
-  // Run scrips for home
   init3dHelmet()
 }
 
 function initStory() {
-  // Run scrips for story
   initTimeline()
+}
+
+function initApp() {
+  initAnimToggle()
+}
+
+function initSpecs() {
+  initFeatures()
 }
 
 export {
