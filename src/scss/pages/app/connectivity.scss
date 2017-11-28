@@ -5,14 +5,14 @@
   @include large {
     height: calc(100vh - 60px);
     justify-content: space-between;
-      flex-direction: initial;
-    }
+    flex-direction: initial;
   }
-  
+}
+
 .app__header__image {
   display: flex;
   justify-content: center;
-    
+
   @include large {
     width: 50%;
     justify-content: flex-end;
@@ -26,7 +26,7 @@
     align-self: center;
 
     @include large {
-      align-self: initial;   
+      align-self: initial;
       margin-top: 0;
     }
   }

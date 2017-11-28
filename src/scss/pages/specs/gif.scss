@@ -1,6 +1,6 @@
 .fonction__header__image {
   width: 100%;
-  
+
   @include large {
     height: calc(100vh - em(60));
     display: flex;
@@ -14,10 +14,10 @@
 
     @include large {
       img {
-      width: em(550);
-      transition: 1s ease;
-      display: block;
-      margin: auto;
+        width: em(550);
+        transition: 1s ease;
+        display: block;
+        margin: auto;
       }
     }
   }
@@ -29,29 +29,32 @@
   margin-top: 45vh;
   cursor: pointer;
   z-index: 5;
-  
+
   transition: all ease 0.4s;
   animation: animate-arrow 1.7s infinite ease;
-  
+
   &:hover {
-    opacity: .5;
+    opacity: 0.5;
     animation: 1.7s infinite ease;
   }
 
   @include large {
     display: block;
   }
-  
+
   @include keyframes(animate-arrow) {
     0% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-7px);
     }
+
     55% {
       transform: translateY(-7px);
     }
+
     100% {
       transform: translateY(0);
     }

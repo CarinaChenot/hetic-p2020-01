@@ -1,0 +1,36 @@
+.descrIsOpen {
+  .tech__title {
+    border-bottom: 1px $black solid;
+    transition: border-bottom 0s ease;
+
+    p:last-of-type {
+      transform: rotate(45deg);
+    }
+  }
+
+  .tech__content {
+    padding: em(40) em(20);
+    max-height: 800px;
+    opacity: 1;
+    display: block;
+    visibility: visible;
+  }
+
+  .feature__title {
+    p:last-of-type {
+      transform: rotate(45deg);
+    }
+  }
+
+  .feature__content {
+    padding: em(40) em(20);
+    max-height: 2000px;
+    opacity: 1;
+    display: block;
+    visibility: visible;
+
+    @include large {
+      padding: 0;
+    }
+  }
+}
