@@ -49,22 +49,61 @@
   height: 100%;
   width: 100%;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: blue;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-  }
-
   &.isLoading {
-    display: initial;
+    @include flex();
+  }
+}
+
+.hero__loaderCircle {
+  background: blue;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 0 10px;
+}
+
+.hero__loaderCircle--one {
+  transform: translateY(10px);
+  animation: circle-one ease 0.6s infinite alternate;
+
+  @include keyframes(circle-one) {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.hero__loaderCircle--two {
+  transform: translateY(-5px);
+  animation: circle-two ease 0.6s 0.1s infinite alternate;
+
+  @include keyframes(circle-two) {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.hero__loaderCircle--three {
+  transform: translateY(-10px);
+  animation: circle-three ease 0.6s 0.2s infinite alternate;
+
+  @include keyframes(circle-three) {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
   }
 }
 
