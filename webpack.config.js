@@ -125,6 +125,16 @@ module.exports = {
       filename: '404.html',
       inject: false,
     }),
+    new HtmlWebpackPlugin({
+      title: 'Specs',
+      template: './src/views/specs.pug',
+      filename: 'specs.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'App',
+      template: './src/views/app.pug',
+      filename: 'app.html',
+    }),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',
       disable: !isProd

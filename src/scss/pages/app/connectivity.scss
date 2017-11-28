@@ -1,0 +1,33 @@
+.app__header {
+  display: flex;
+  flex-direction: column;
+
+  @include large {
+    height: calc(100vh - 60px);
+    justify-content: space-between;
+    flex-direction: initial;
+  }
+}
+
+.app__header__image {
+  display: flex;
+  justify-content: center;
+
+  @include large {
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  img {
+    height: 420px;
+    width: auto;
+    margin-top: 80px;
+    align-self: center;
+
+    @include large {
+      align-self: initial;
+      margin-top: 0;
+    }
+  }
+}

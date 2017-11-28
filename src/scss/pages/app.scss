@@ -1,0 +1,7 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+@import 'app/connectivity';
+@import 'app/content';

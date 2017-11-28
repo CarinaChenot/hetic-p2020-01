@@ -1,0 +1,151 @@
+.app__header__connect {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  @include large {
+    width: 50%;
+    justify-content: left;
+    text-align: left;
+    flex-direction: initial;
+  }
+}
+
+.app__descr {
+  display: flex;
+  flex-direction: column;
+  margin: em(70) 0 em(80) 0;
+
+  @include large {
+    margin: 0 0 em(80) 0;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: em(60);
+    color: rgb(69, 225, 177);
+    margin-top: 0;
+  }
+
+  p {
+    width: em(450);
+    align-self: center;
+
+    @include large {
+      align-self: auto;
+    }
+  }
+}
+
+.app__download {
+  display: flex;
+  justify-content: space-between;
+  width: em(420);
+  margin: auto;
+
+  @include large {
+    align-self: auto;
+    margin: 0;
+  }
+}
+
+.app__content {
+  @include large {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.app__img__container {
+  margin-top: em(75);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include large {
+    width: 60%;
+    margin-top: 0;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 520px;
+
+    img {
+      opacity: 0.6;
+      width: 176px;
+      height: 418px;
+      transition: all ease 1s;
+    }
+  }
+
+  .page:hover {
+    img {
+      width: 220px;
+      height: 517px;
+      opacity: 1;
+    }
+  }
+
+  .imageIsHover {
+    img {
+      width: 220px;
+      height: 517px;
+      opacity: 1;
+    }
+  }
+}
+
+.app__img__descr {
+  margin-top: em(60);
+  display: flex;
+  justify-content: center;
+
+  @include large {
+    width: 40%;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .leg {
+    opacity: 0;
+    display: none;
+    transition: all ease 1s;
+  }
+
+  .descrIsOpen {
+    opacity: 1;
+    display: block;
+  }
+
+  div {
+    width: em(550);
+    flex-direction: column;
+
+    @include large {
+      align-content: center;
+
+      p {
+        width: 80%;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: rgb(69, 225, 177);
+
+      @include large {
+        text-align: left;
+      }
+    }
+  }
+}
