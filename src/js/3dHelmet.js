@@ -1,7 +1,11 @@
-let helmetJson = require('../assets/3D/scene.json')
+import Loader from './loader'
 
 const THREE = require('three')
 const OrbitControls = require('three-orbit-controls')(THREE)
+
+const helmetJson = require('../assets/3D/scene.json')
+
+const loader = new Loader()
 
 class Helmet {
   constructor() {
@@ -24,7 +28,7 @@ class Helmet {
       this.renderer.render(this.scene, this.camera)
     })
     THREE.DefaultLoadingManager.onLoad = function() {
-      // console.log('Loading Complete!')
+      loader.loaded()
     }
   }
   init() {
@@ -44,7 +48,8 @@ class Helmet {
     renderer.shadowMapBias = 0.0039
     renderer.shadowMapDarkness = 0.5
 
-    let renderWebGL = document.querySelector('.render')
+    let renderWebGL = document.querySelector('.hero__helmet')
+    renderer.domElement.style = ''
     renderWebGL.appendChild(renderer.domElement)
 
     let ambientLight = new THREE.AmbientLight(0x000000)
@@ -87,6 +92,8 @@ class Helmet {
 }
 
 export function init3dHelmet() {
+  loader.init()
+
   const helmet3d = new Helmet()
   helmet3d.init()
   helmet3d.render()

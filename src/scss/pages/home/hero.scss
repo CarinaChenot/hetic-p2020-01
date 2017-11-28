@@ -1,49 +1,75 @@
 .hero {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
    /* stylelint-disable */
-  grid-template-areas:
-    "hero__image hero__image"
-    "hero__cta hero__cta"
-    "hero__description hero__description";
-
   @include medium {
+    display: grid;
     margin: 0 3em;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-      "hero__image"
+      "hero__helmet"
       "hero__description"
       "hero__cta";
   }
 
   @include large {
+    display: grid;
     margin: 2em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "hero__image hero__description"
-      "hero__image hero__cta";
+      "hero__helmet hero__description"
+      "hero__helmet hero__cta";
     /* stylelint-enable */
   }
 }
 
-.hero__image {
-  grid-area: hero__image;
-  max-width: 100%;
-  padding: 3em 2em;
-  margin: auto;
+.hero__helmet {
+  grid-area: hero__helmet;
+  position: relative;
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
 
   @include medium {
     margin: initial;
   }
 
   @include large {
-    margin: auto;
-    padding: 5em;
-    max-width: 70%;
+
   }
+}
+
+.hero__loader {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+  }
+
+  &.isLoading {
+    display: initial;
+  }
+}
+
+.hero__image {
+  display: none;
 }
 
 .hero__ctaWrapper {
