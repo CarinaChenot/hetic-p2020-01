@@ -16,14 +16,16 @@ const STORAGE_KEY = 'ch_page_'
 class Navigation {
   constructor() {
     this.$content = document.querySelector('.content')
-    this.$link = document.querySelectorAll('[data-link]')
     this.history = createHistory()
     this.currentPage = this.getCurrentPage()
-    this.init()
-  }
-  init() {
+    this.retrieveLinks()
     this.getContent(this.currentPage)
-
+  }
+  retrieveLinks() {
+    this.$link = document.querySelectorAll('[data-link]')
+    this.addEvents()
+  }
+  addEvents() {
     this.$link.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault()
@@ -31,6 +33,9 @@ class Navigation {
         this.update()
       })
     })
+  }
+  updateCurrentPage() {
+    this.currentPage = this.getCurrentPage()
   }
   getCurrentPage() {
     let location = this.history.location.pathname.substr(1)
@@ -61,9 +66,12 @@ class Navigation {
   }
   updateUrl() {
     this.history.push('/' + (this.currentPage === HOME_PAGE ? '' : this.currentPage))
+    window && window.scroll(0, 0)
   }
   updateDOM(data) {
     this.$content.innerHTML = data
+    this.retrieveLinks()
+
     initTranslation()
 
     switch (this.currentPage) {

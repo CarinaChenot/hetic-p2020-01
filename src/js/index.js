@@ -10,4 +10,7 @@ const menu = new Menu()
 
 nav.history.listen(() => {
   if (menu.isOpen) menu.setIsOpen(false)
+
+  nav.updateCurrentPage()
+  nav.getContent()
 })
