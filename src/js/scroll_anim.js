@@ -5,6 +5,11 @@ IntersectionObserver.prototype.POLL_INTERVAL = 100
 function onIntersect(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('scrolled')
+
+    if (entry.target.duration !== undefined) {
+      if (entry.isIntersecting) entry.target.play()
+      else if (!entry.isIntersecting) entry.target.pause()
+    }
   })
 }
 

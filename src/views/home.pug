@@ -13,12 +13,9 @@ section.hero
     p.description__text(data-i18n='description_text') The CrossHelmet is a next generation motorcycle helmet with sound control and 360˚ visibility that will transform your riding experience. Motorcycles are developing faster than helmets. As a rider, you need more choices, to find the helmet that meets your needs.
 
 section.experience.to-animate
-  .experience__video
-    video(autoplay, muted, loop)
-      source(src=require('../assets/video/demo.mp4'), type='video/mp4')
-      source(src=require('../assets/video/demo.webm'), type='video/webm')
-  p.experience__text.to-animate(data-i18n='experience_text') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  a.experience__cta(href='#', data-i18n='experience') Live the experience
+  video.experience__video.to-animate(autoplay, muted, loop)
+    source(src=require('../assets/video/demo.mp4'), type='video/mp4')
+    source(src=require('../assets/video/demo.webm'), type='video/webm')
 
 section.lab
   .lab__imgWrapper
