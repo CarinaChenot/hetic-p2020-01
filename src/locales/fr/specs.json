@@ -1,5 +1,6 @@
 {
-  "model_name_title": "Model Name",
+  "tech_specs": "Fiche technique",
+  "model_name_title": "Nom du modèle",
   "model_name": "X1 [cross-one]",
   "safety_title": "Sécurité certifiée",
   "safety": "DOT, ECE, JIS",
@@ -30,11 +31,11 @@
   "sizing_title": "Taille",
   "sizing": "Medium [58-60cm], Large [61-63cm]",
   "color_title": "Couleur",
-  "color": "Iron Silver, Luster Black",
+  "color": "Argenté, Noir",
   "visor_title": "Teinte de la visière",
-  "visor": "Clear, Tintée",
+  "visor": "Claire, Tintée",
   "price_title": "Prix en détail",
-  "price": "$1,799  ~",
+  "price": "1 517 €",
   "delivery_title": "Délai de livraison estimé",
   "delivery": 2018
 }
