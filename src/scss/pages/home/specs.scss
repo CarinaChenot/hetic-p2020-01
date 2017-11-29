@@ -17,11 +17,33 @@
     align-items: left;
     padding-left: 50%;
     justify-content: center;
+    will-change: auto;
+    transform: scale(0.8) translateY(30%);
+    opacity: 0;
+    transition: all $transition-bezier2 0.5s;
+
+    &.scrolled {
+      will-change: auto;
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      transition: all $transition-bezier2 0.5s;
+    }
   }
 }
 
 .specs__title {
   margin-top: 0;
+  will-change: auto;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all $transition-bezier2 0.5s;
+
+  &.scrolled {
+    will-change: auto;
+    transform: translateY(0);
+    opacity: 1;
+    transition: all $transition-bezier2 0.5s 0.3s;
+  }
 }
 
 .specs__image {
@@ -33,6 +55,18 @@
     left: 0;
     top: 5em;
   }
+
+  will-change: auto;
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: all $transition-bezier2 0.5s 0.8s;
+
+  &.scrolled {
+    will-change: auto;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all $transition-bezier2 0.5s 0.8s;
+  }
 }
 
 .specs__text {
@@ -43,6 +77,17 @@
 
   @include large {
     display: none;
+    will-change: auto;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all $transition-bezier2 0.5s 0.2s;
+  }
+
+  &.scrolled {
+    will-change: auto;
+    transform: translateY(0);
+    opacity: 1;
+    transition: all $transition-bezier2 0.5s 0.2s;
   }
 }
 
@@ -53,13 +98,36 @@
 
   @include large {
     display: initial;
+    will-change: auto;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all $transition-bezier2 0.5s 0.3s;
+  }
+
+  &.scrolled {
+    will-change: auto;
+    transform: translateY(0);
+    opacity: 1;
+    transition: all $transition-bezier2 0.5s 0.3s;
   }
 }
 
 .specs__cta {
   @extend %baseBtn;
 
+  will-change: auto;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all $transition-bezier2 0.5s 0.4s;
+
   @include large {
     margin-top: 1em;
+  }
+
+  &.scrolled {
+    will-change: auto;
+    transform: translateY(0);
+    opacity: 1;
+    transition: all $transition-bezier2 0.5s 0.4s;
   }
 }
