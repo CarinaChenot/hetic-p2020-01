@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   padding: 0 1em 3em;
-  will-change: auto;
-  transform: translateY(60px);
-  opacity: 0;
-  transition: all $transition-bezier2 0.5s 0.2s;
 
   @include large {
     flex-direction: row-reverse;
     justify-content: center;
+    will-change: auto;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all $transition-bezier2 0.5s 0.2s;
   }
 
   &.scrolled {

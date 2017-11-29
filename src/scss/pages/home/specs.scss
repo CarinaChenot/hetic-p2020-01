@@ -54,12 +54,11 @@
     position: absolute;
     left: 0;
     top: 5em;
+    will-change: auto;
+    transform: translateX(-20%);
+    opacity: 0;
+    transition: all $transition-bezier2 0.5s 0.8s;
   }
-
-  will-change: auto;
-  transform: translateX(-20%);
-  opacity: 0;
-  transition: all $transition-bezier2 0.5s 0.8s;
 
   &.scrolled {
     will-change: auto;
@@ -115,13 +114,12 @@
 .specs__cta {
   @extend %baseBtn;
 
-  will-change: auto;
-  transform: translateY(60px);
-  opacity: 0;
-  transition: all $transition-bezier2 0.5s 0.4s;
-
   @include large {
     margin-top: 1em;
+    will-change: auto;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all $transition-bezier2 0.5s 0.4s;
   }
 
   &.scrolled {

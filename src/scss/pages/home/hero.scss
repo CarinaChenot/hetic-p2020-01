@@ -131,10 +131,6 @@
   background-color: $black;
   color: $white;
   padding: 2em 3em;
-  will-change: auto;
-  opacity: 0;
-  transform: translateY(20%);
-  transition: all $transition-bezier2 0.5s;
 
   @include medium {
     max-width: 70vw;
@@ -150,6 +146,10 @@
     margin: 0;
     padding: 5em 5em 5em 0;
     max-width: 40vw;
+    will-change: auto;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all $transition-bezier2 0.5s;
   }
 
   &.scrolled {
