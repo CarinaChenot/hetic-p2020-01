@@ -18,18 +18,19 @@ class Navigation {
     this.$content = document.querySelector('.content')
     this.history = createHistory()
     this.currentPage = this.getCurrentPage()
-    this.retrieveLinks()
+    this.$links = document.querySelectorAll('[data-link]')
+    this.addEvents()
     this.getContent(this.currentPage)
   }
-  retrieveLinks() {
-    this.$link = document.querySelectorAll('[data-link]')
-    this.addEvents()
+  retrieveBodyLinks() {
+    let bodyLinks = document.querySelectorAll('[data-body-link]')
+    this.addEvents(bodyLinks)
   }
-  addEvents() {
-    this.$link.forEach(link => {
+  addEvents(links = this.$links) {
+    links.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault()
-        this.currentPage = link.getAttribute('data-link')
+        this.currentPage = link.getAttribute('data-link') || link.getAttribute('data-body-link')
         this.update()
       })
     })
@@ -70,13 +71,13 @@ class Navigation {
   }
   updateDOM(data) {
     this.$content.innerHTML = data
-    this.retrieveLinks()
 
     initTranslation()
 
     switch (this.currentPage) {
       case HOME_PAGE:
         initHome()
+        this.retrieveBodyLinks()
         break
       case STORY_PAGE:
         initStory()
