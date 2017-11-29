@@ -22,6 +22,7 @@ class Helmet {
     this.controls.minPolarAngle = 0
     this.controls.maxPolarAngle = Math.PI / 2
     this.controls.enabled = true
+    this.controls.enableZoom = false
     this.controls.maxDistance = 30
     this.controls.minDistance = 30
     this.controls.addEventListener('change', () => {
