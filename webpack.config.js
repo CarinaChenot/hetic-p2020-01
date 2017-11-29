@@ -96,6 +96,10 @@ module.exports = {
             'pattern': path.resolve(__dirname, 'src/locales/fr/*.json'),
             'fileName': './locales/fr.json',
           },
+          {
+            'pattern': path.resolve(__dirname, 'src/locales/jp/*.json'),
+            'fileName': './locales/jp.json',
+          },
         ],
       },
     }),
