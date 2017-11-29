@@ -50,7 +50,7 @@
   transition-timing-function: ease;
   overflow: hidden;
 
-  .tech__descr {
+  .descr {
     display: flex;
     justify-content: space-between;
 
@@ -92,7 +92,7 @@
     margin: em(40) auto em(40) auto;
   }
 
-  .feature__descr {
+  .descr {
     h3 {
       font-size: $size-h3;
       text-transform: uppercase;

@@ -1,4 +1,4 @@
-.app__header {
+.appheader {
   display: flex;
   flex-direction: column;
 
@@ -9,7 +9,7 @@
   }
 }
 
-.app__header__image {
+.show {
   display: flex;
   justify-content: center;
 
@@ -29,5 +29,58 @@
       align-self: initial;
       margin-top: 0;
     }
+  }
+}
+
+.connectivity {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  @include large {
+    width: 50%;
+    justify-content: left;
+    text-align: left;
+    flex-direction: initial;
+  }
+}
+
+.app__descr {
+  display: flex;
+  flex-direction: column;
+  margin: em(70) 0 em(80) 0;
+
+  @include large {
+    margin: 0 0 em(80) 0;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: em(60);
+    color: rgb(69, 225, 177);
+    margin-top: 0;
+  }
+
+  p {
+    width: em(450);
+    align-self: center;
+
+    @include large {
+      align-self: auto;
+    }
+  }
+}
+
+.app__download {
+  display: flex;
+  justify-content: space-between;
+  width: em(420);
+  margin: auto;
+
+  @include large {
+    align-self: auto;
+    margin: 0;
   }
 }

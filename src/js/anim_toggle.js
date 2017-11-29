@@ -7,6 +7,7 @@ class AnimToggle {
     this.$images[1].addEventListener('mouseover', e => this.toggleImage(e, 1))
     this.$images[2].addEventListener('mouseover', e => this.toggleImage(e, 2))
   }
+
   toggleImage(e, i) {
     if (!this.$images[i].classList.contains('imageIsHover')) {
       var n = 0

@@ -1,29 +1,27 @@
-.fonction__header__image {
+.fonction__gif {
   width: 100%;
 
+  img {
+    width: 100%;
+  }
+
   @include large {
-    height: calc(100vh - em(60));
+    height: calc(100vh - 60px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
 
-  img {
-    width: 100%;
-
-    @include large {
-      img {
-        width: em(550);
-        transition: 1s ease;
-        display: block;
-        margin: auto;
-      }
+    img {
+      width: 60%;
+      transition: 1s ease;
+      display: block;
+      margin: auto;
     }
   }
 }
 
-.fonction__header__arrow {
+.arrow {
   display: none;
   align-items: center;
   margin-top: 45vh;
@@ -33,6 +31,10 @@
   transition: all ease 0.4s;
   animation: animate-arrow 1.7s infinite ease;
 
+  svg {
+    width: 40px;
+  }
+
   &:hover {
     opacity: 0.5;
     animation: 1.7s infinite ease;
@@ -40,6 +42,7 @@
 
   @include large {
     display: block;
+    margin: auto;
   }
 
   @include keyframes(animate-arrow) {
