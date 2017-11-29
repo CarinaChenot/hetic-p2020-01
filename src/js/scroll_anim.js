@@ -1,4 +1,4 @@
-// import './vendors/io-polyfill.js' //TODO: Add sourcemaps (fix eslint ?)
+import 'intersection-observer'
 
 IntersectionObserver.prototype.POLL_INTERVAL = 100
 
@@ -14,4 +14,6 @@ const options = {
 
 const observer = new window.IntersectionObserver(onIntersect, options)
 
-;[...document.querySelectorAll('.to-animate')].forEach(element => observer.observe(element))
+export function initScrollAnim() {
+  ;[...document.querySelectorAll('.to-animate')].forEach(element => observer.observe(element))
+}
