@@ -1,6 +1,7 @@
 import createHistory from 'history/createBrowserHistory'
 import { initTimeline } from './timeline'
 import { initAnimToggle } from './anim_toggle'
+import { initScrollAnim } from './scroll_anim'
 import { initFeatures } from './features'
 import { initTranslation } from './translation'
 import { init3dHelmet } from './3dHelmet'
@@ -94,6 +95,7 @@ class Navigation {
 }
 
 function initHome() {
+  initScrollAnim()
   init3dHelmet()
 }
 
