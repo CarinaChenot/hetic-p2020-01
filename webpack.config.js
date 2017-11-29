@@ -129,11 +129,13 @@ module.exports = {
       title: 'Specs',
       template: './src/views/specs.pug',
       filename: 'specs.html',
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       title: 'App',
       template: './src/views/app.pug',
       filename: 'app.html',
+      inject: false,
     }),
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css',
