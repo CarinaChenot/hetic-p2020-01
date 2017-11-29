@@ -46,7 +46,7 @@ class Navigation {
     let mobileAppUrl
 
     if (this.currentPage === 'app' && (mobileAppUrl = this.mobileAppUrl())) {
-      this.history.push(mobileAppUrl)
+      window.location = mobileAppUrl
       return
     }
 
