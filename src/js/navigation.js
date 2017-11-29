@@ -38,8 +38,26 @@ class Navigation {
     return location === '' ? HOME_PAGE : location
   }
   update() {
+    let mobileAppUrl
+
+    if (this.currentPage === 'app' && (mobileAppUrl = this.mobileAppUrl())) {
+      this.history.push(mobileAppUrl)
+      return
+    }
+
     this.getContent()
     this.updateUrl()
+  }
+  mobileAppUrl() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera
+
+    if (/android/i.test(userAgent)) {
+      return 'https://play.google.com/store/apps/details?id=com.google.android.youtube'
+    } else if (/iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return 'https://itunes.apple.com/fr/app/youtube/id544007664?mt=8'
+    }
+
+    return false
   }
   updateUrl() {
     this.history.push('/' + (this.currentPage === HOME_PAGE ? '' : this.currentPage))
