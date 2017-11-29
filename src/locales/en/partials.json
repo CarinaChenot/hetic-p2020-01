@@ -4,5 +4,6 @@
   "specs": "Product Specs",
   "purchase": "Purchase",
   "get_app": "Get the app",
-  "legal": "2017 © CrossHelmet All Rights Reserved."
+  "legal": "2017 © CrossHelmet All Rights Reserved.",
+  "error": "Ooops looks like something went wrong."
 }
