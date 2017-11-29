@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const MergeJsonWebpackPlugin = require('merge-jsons-webpack-plugin');
 
 const isProd = (process.env.NODE_ENV === 'production');
 
@@ -14,7 +15,7 @@ module.exports = {
   devtool: isProd ? '' : 'eval-source-map',
   output: {
     filename: isProd ? '[name].bundle.min.js' : '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -54,6 +55,9 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|json)$/,
+        include: [
+          path.resolve(__dirname, 'src/assets'),
+        ],
         use: [
           'file-loader'
         ]
@@ -76,26 +80,25 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.(yaml)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].json',
-              context: 'src',
-            },
-          },
-          {
-            loader: 'yaml-loader',
-          },
-        ],
-      },
     ],
   },
   plugins: [
     require('autoprefixer'),
     new CleanWebpackPlugin(['dist']),
+    new MergeJsonWebpackPlugin({
+      'output': {
+        'groupBy': [
+          {
+            'pattern': path.resolve(__dirname, 'src/locales/en/*.json'),
+            'fileName': './locales/en.json',
+          },
+          {
+            'pattern': path.resolve(__dirname, 'src/locales/fr/*.json'),
+            'fileName': './locales/fr.json',
+          },
+        ],
+      },
+    }),
     new HtmlWebpackPlugin({
       title: 'Main',
       template: './src/views/main.pug',
