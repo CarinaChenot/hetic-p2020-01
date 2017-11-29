@@ -4,5 +4,6 @@
   "specs": "テクニカルシート",
   "purchase": "購入",
   "get_app": "アプリを入手する",
-  "legal": "2017©CrossHelmetすべての権利を保有します。"
+  "legal": "2017©CrossHelmetすべての権利を保有します。",
+  "error": "エラーが発生したようです。"
 }
