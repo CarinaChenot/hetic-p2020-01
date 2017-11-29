@@ -1,8 +1,10 @@
-.app {
+.mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 1em 3em;
+  position: relative;
+  z-index: 2;
 
   @include large {
     flex-direction: row-reverse;
@@ -21,12 +23,12 @@
   }
 }
 
-.app__image {
+.mobile__image {
   max-width: 80%;
   margin-top: -9em;
 }
 
-.app__textWrapper {
+.mobile__textWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -37,7 +39,7 @@
   }
 }
 
-.app__text {
+.mobile__text {
   @extend %pText;
 
   margin: 2em;
@@ -47,7 +49,7 @@
   }
 }
 
-.app__text--large {
+.mobile__text--large {
   display: none;
 
   @include large {
@@ -55,7 +57,7 @@
   }
 }
 
-.app__cta {
+.mobile__cta {
   @extend %baseBtn;
 
   margin: auto;
