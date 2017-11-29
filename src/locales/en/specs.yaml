@@ -1,0 +1,40 @@
+---
+tech_specs: Tech Specs
+model_name_title: Model Name
+model_name: X1 [cross-one]
+safety_title: Safety certified
+safety: DOT, ECE, JIS
+material_title: Shell Material
+material: LEXAN Polycarbonate
+weight_title: Weight
+weight: 1,780g
+processor_title: Main Processor
+processor: Quad ARM Cortex A53, 1.2GHz
+storage_title: Stockage Flash
+storage: 8GB
+mobile_application_title: Mobile Application
+mobile_application: IOS, Android
+bluetooth_title: Bluetooth
+bluetooth: 4.1, BLE
+location_service_title: Location service
+location_service: GPS, GLONASS
+inputs_title: Inputs
+inputs: USB type-C
+resolution_title: HUD Resolution
+resolution: 1280 x 720   2500 ppi
+camera_title: Camera Angle
+camera: 170 degrés
+safety_light_title: LED safety light
+safety_light: White Color
+time_title: Operational Time
+time: 6-8 hours
+sizing_title: Sizing
+sizing: Medium [58-60cm], Large [61-63cm]
+color_title: Color
+color: Iron Silver, Luster Black
+visor_title: Visor Tint
+visor: Clear, Tintée
+price_title: Retail Price
+price: "$1,799 ~"
+delivery_title: Estimated Delivery
+delivery: '2018'
