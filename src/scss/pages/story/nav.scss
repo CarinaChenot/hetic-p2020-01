@@ -6,7 +6,8 @@
     right: 0;
     top: 0;
     width: 150px;
-    height: 100vh;
+    height: 70vh;
+    margin-top: 15vh;
     padding-right: 25px;
 
     @include flex($direction: column, $align: flex-end);
