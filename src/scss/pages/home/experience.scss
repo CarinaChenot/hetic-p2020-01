@@ -1,8 +1,5 @@
 .experience {
-  padding: 3em 2em;
   text-align: center;
-  background: grey;
-  min-height: 80vh;
 
   @include large {
     padding-bottom: 5em;
@@ -20,7 +17,16 @@
   }
 }
 
+.experience__video {
+  width: 100%;
+
+  video {
+    width: 100%;
+  }
+}
+
 .experience__text {
+  padding: 3em 2em;
   display: none;
   color: $white;
   font-size: em(20);
