@@ -100,12 +100,12 @@ class Timeline {
         e.preventDefault()
         e.stopPropagation()
         if (that.lethargy.check(e) === 1) {
-          if(that.index > 0) {
+          if (that.index > 0) {
             that.up()
             that.jam()
           }
         } else if (that.lethargy.check(e) === -1) {
-          if(that.index < that.allSlide -1) {
+          if (that.index < that.allSlide - 1) {
             that.down()
             that.jam()
           }
@@ -121,7 +121,6 @@ class Timeline {
      */
 
     let that = this
-    
     this.content.addEventListener('mousewheel', function(e) { that.lethargyScroll(e) })
     this.content.addEventListener('DOMMouseScroll', function(e) { that.lethargyScroll(e) })
     this.content.addEventListener('wheel', function(e) { that.lethargyScroll(e) })
